@@ -10,7 +10,7 @@ import {
   StyleProp,
   TextStyle,
 } from 'react-native';
-import {RneFunctionComponent} from '../helpers';
+import {StarFunctionComponent} from '../helpers';
 import {renderNode, patchWebProps} from '../helpers';
 import {fonts} from '../config';
 import Icon, {IconNode} from '../Icon';
@@ -58,7 +58,7 @@ export type InputProps = React.ComponentPropsWithRef<typeof TextInput> & {
   renderErrorMessage?: boolean;
 };
 
-export const Input: RneFunctionComponent<
+export const Input: StarFunctionComponent<
   InputProps & Partial<ThemeProps<InputProps>>
 > = ({
   containerStyle,

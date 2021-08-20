@@ -16,7 +16,7 @@ const ScreenWidth = Screen.width;
 const ScreenHeight = Screen.height;
 const isIOS = Platform.OS === 'ios';
 
-export type RneFunctionComponent<T> = React.FunctionComponent<
+export type StarFunctionComponent<T> = React.FunctionComponent<
   T & Partial<ThemeProps<T>>
 >;
 

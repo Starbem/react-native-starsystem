@@ -1,33 +1,25 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  useColorScheme,
-  View,
-} from 'react-native';
-import {Badge} from './src';
-
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {StatusBar, useColorScheme, View} from 'react-native';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {Header} from './src';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaProvider>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <View style={{padding: 13}}>
-          <Badge status="secondary" value="10" />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+      <View style={{padding: 0}}>
+        <Header
+          placement="left"
+          backgroundColor="secondary"
+          centerComponent={{
+            text: 'Agendar Consulta',
+            style: {color: '#fff', fontSize: 16},
+          }}
+        />
+      </View>
+    </SafeAreaProvider>
   );
 };
 

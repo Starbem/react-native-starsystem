@@ -9,13 +9,13 @@ import Badge, {BadgeProps, withBadge} from './Badge';
 import BottomSheet, {BottomSheetProps} from './BottomSheet';
 import Button, {ButtonProps} from './Button';
 // import ButtonGroup, {ButtonGroupProps} from './ButtonGroup';
-// import Card, {CardProps} from './Card';
+import Card, {CardProps} from './Card';
 // import CheckBox, {CheckBoxProps} from './CheckBox';
 // import Chip, {ChipProps} from './Chip';
 // import Dialog, {DialogLoadingProps, DialogTitleProps} from './Dialog';
-// import Divider, {DividerProps} from './Divider';
+import Divider, {DividerProps} from './Divider';
 // import FAB, {FABProps} from './FAB';
-// import Header, {HeaderProps} from './Header';
+import Header, {HeaderProps} from './Header';
 import Icon, {IconProps} from './Icon';
 import Image, {ImageProps} from './Image';
 import Input, {InputProps} from './Input';
@@ -76,13 +76,13 @@ export {
   BottomSheet,
   Button,
   // ButtonGroup,
-  // Card,
+  Card,
   // CheckBox,
   // Chip,
   // Dialog,
-  // Divider,
+  Divider,
   // FAB,
-  // Header,
+  Header,
   Icon,
   Image,
   Input,
@@ -128,15 +128,15 @@ export type {
   BottomSheetProps,
   // ButtonGroupProps,
   ButtonProps,
-  // CardProps,
+  CardProps,
   // CheckBoxProps,
   // ChipProps,
   Colors,
   // DialogLoadingProps,
   // DialogTitleProps,
-  // DividerProps,
+  DividerProps,
   // FABProps,
-  // HeaderProps,
+  HeaderProps,
   IconProps,
   ImageProps,
   InputProps,
