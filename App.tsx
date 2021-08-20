@@ -6,7 +6,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import {Text} from './src';
+import {Avatar} from './src';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
@@ -24,7 +24,13 @@ const App = () => {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <View style={{padding: 13}}>
-          <Text color="secondary">Teste</Text>
+          <Avatar
+            size="large"
+            rounded
+            source={{
+              uri: 'https://media.gazetadopovo.com.br/2020/01/17155825/lamborghini-huracan-Alexander-Migl-wikimedia-commons.jpg',
+            }}
+          />
         </View>
       </ScrollView>
     </SafeAreaView>

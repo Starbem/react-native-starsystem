@@ -4,7 +4,7 @@
 // https://material.angularjs.org/latest/demo/button
 // Core
 // import AirbnbRating, {TapRatingProps} from './AirbnbRating';
-// import Avatar, {AvatarProps} from './Avatar';
+import Avatar, {AvatarProps} from './Avatar';
 // import Badge, {BadgeProps, withBadge} from './Badge';
 // import BottomSheet, {BottomSheetProps} from './BottomSheet';
 import Button, {ButtonProps} from './Button';
@@ -65,7 +65,7 @@ import normalize from './helpers/normalizeText';
 // Components exports
 export {
   // AirbnbRating,
-  // Avatar,
+  Avatar,
   // Badge,
   // BottomSheet,
   Button,
@@ -114,7 +114,7 @@ export {
 
 // Components Props exports
 export type {
-  // AvatarProps,
+  AvatarProps,
   // BadgeProps,
   // BottomSheetProps,
   // ButtonGroupProps,
