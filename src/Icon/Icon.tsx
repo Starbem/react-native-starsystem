@@ -37,16 +37,12 @@ export type IconType =
 export type IconObject = TouchableHighlightProps & {
   /** Name of icon. */
   name?: string;
-
   /** Color of icon. */
   color?: string;
-
   /** Size of icon. */
   size?: number;
-
   /** Type of icon */
   type?: IconType;
-
   /** Apply style to the icon using iconStyle. */
   iconStyle?: StyleProp<TextStyle>;
 };
@@ -56,40 +52,28 @@ export type IconNode = boolean | React.ReactElement<{}> | Partial<IconProps>;
 export type IconProps = IconButtonProps & {
   /** Type of icon set. [Supported sets here](#available-icon-sets). */
   type?: IconType;
-
   /** Update React Native Component. */
   Component?: typeof React.Component;
-
   /** Reverses color scheme. */
   reverse?: boolean;
-
   /** Adds box shadow to button. */
   raised?: boolean;
-
   /** Add styling to container holding icon. */
   containerStyle?: StyleProp<ViewStyle>;
-
   /** Provide all props from react-native Icon component. */
   iconProps?: VectorIconProps;
-
   /** Specify reverse icon color. */
   reverseColor?: string;
-
   /** Disables onPress events. Only works when `onPress` has a handler. */
   disabled?: boolean;
-
   /** Style for the button when disabled. Only works when `onPress` has a handler. */
   disabledStyle?: StyleProp<ViewStyle>;
-
   /** Uses the solid font. */
   solid?: boolean;
-
   /** Uses the brands font (FontAwesome5 only). */
   brand?: boolean;
 };
 
-/** Icons are visual indicators usually used to describe action or intent.
- * They are also used for displaying information. */
 export const Icon: RneFunctionComponent<IconProps> = ({
   type = 'material',
   name,
@@ -160,7 +144,7 @@ export const Icon: RneFunctionComponent<IconProps> = ({
           : {},
         containerStyle && containerStyle,
       ])}
-      testID="RNE__ICON__CONTAINER">
+      testID="STAR__ICON__CONTAINER">
       <Component
         {...attributes}
         {...(onPress && {
@@ -170,7 +154,7 @@ export const Icon: RneFunctionComponent<IconProps> = ({
           activeOpacity: 0.3,
           accessibilityRole: 'button',
         })}
-        testID="RNE__ICON__CONTAINER_ACTION">
+        testID="STAR__ICON__CONTAINER_ACTION">
         <View
           style={StyleSheet.flatten([
             (reverse || raised) && buttonStyles,
@@ -182,9 +166,9 @@ export const Icon: RneFunctionComponent<IconProps> = ({
             disabled && styles.disabled,
             disabled && disabledStyle,
           ])}
-          testID="RNE__ICON">
+          testID="STAR__ICON">
           <IconComponent
-            testID="RNE__ICON__Component"
+            testID="STAR__ICON__Component"
             style={StyleSheet.flatten([
               {backgroundColor: 'transparent'},
               iconStyle && iconStyle,

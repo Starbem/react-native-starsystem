@@ -141,7 +141,7 @@ export const Avatar: RneFunctionComponent<AvatarProps> = ({
       ])}
       {...attributes}>
       <Image
-        testID="RNE__Avatar__Image"
+        testID="STAR__Avatar__Image"
         placeholderStyle={StyleSheet.flatten([
           placeholderStyle,
           hidePlaceholder && styles.hiddenPlaceholderStyle,

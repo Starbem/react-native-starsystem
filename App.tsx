@@ -6,7 +6,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import {Avatar} from './src';
+import {Badge} from './src';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
@@ -24,13 +24,7 @@ const App = () => {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <View style={{padding: 13}}>
-          <Avatar
-            size="large"
-            rounded
-            source={{
-              uri: 'https://media.gazetadopovo.com.br/2020/01/17155825/lamborghini-huracan-Alexander-Migl-wikimedia-commons.jpg',
-            }}
-          />
+          <Badge status="secondary" value="10" />
         </View>
       </ScrollView>
     </SafeAreaView>

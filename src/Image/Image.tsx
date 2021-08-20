@@ -83,7 +83,7 @@ export const Image: RneFunctionComponent<ImageProps> = ({
       style={StyleSheet.flatten([styles.container, containerStyle])}>
       <ImageComponent
         ref={root}
-        testID="RNE__Image"
+        testID="STAR__Image"
         {...props}
         {...{transition, transitionDuration}}
         onLoad={onLoadHandler}
@@ -102,7 +102,7 @@ export const Image: RneFunctionComponent<ImageProps> = ({
           },
         ]}>
         <View
-          testID="RNE__Image__placeholder"
+          testID="STAR__Image__placeholder"
           style={StyleSheet.flatten([
             style,
             styles.placeholder,
@@ -111,7 +111,7 @@ export const Image: RneFunctionComponent<ImageProps> = ({
           {React.isValidElement(PlaceholderContent)
             ? PlaceholderContent
             : PlaceholderContent && (
-                <Text testID="RNE__Image__Placeholder__Content">
+                <Text testID="STAR__Image__Placeholder__Content">
                   {PlaceholderContent}
                 </Text>
               )}
@@ -119,7 +119,7 @@ export const Image: RneFunctionComponent<ImageProps> = ({
       </Animated.View>
       {/* Children for Image */}
       <View
-        testID="RNE__Image__children__container"
+        testID="STAR__Image__children__container"
         style={childrenContainerStyle ?? style}>
         {children}
       </View>

@@ -5,7 +5,7 @@
 // Core
 // import AirbnbRating, {TapRatingProps} from './AirbnbRating';
 import Avatar, {AvatarProps} from './Avatar';
-// import Badge, {BadgeProps, withBadge} from './Badge';
+import Badge, {BadgeProps, withBadge} from './Badge';
 // import BottomSheet, {BottomSheetProps} from './BottomSheet';
 import Button, {ButtonProps} from './Button';
 // import ButtonGroup, {ButtonGroupProps} from './ButtonGroup';
@@ -66,7 +66,7 @@ import normalize from './helpers/normalizeText';
 export {
   // AirbnbRating,
   Avatar,
-  // Badge,
+  Badge,
   // BottomSheet,
   Button,
   // ButtonGroup,
@@ -106,7 +106,7 @@ export {
   ThemeProvider,
   ThemeConsumer,
   ThemeContext,
-  // withBadge,
+  withBadge,
   withTheme,
   useTheme,
   makeStyles,
@@ -115,7 +115,7 @@ export {
 // Components Props exports
 export type {
   AvatarProps,
-  // BadgeProps,
+  BadgeProps,
   // BottomSheetProps,
   // ButtonGroupProps,
   ButtonProps,

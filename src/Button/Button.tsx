@@ -232,7 +232,7 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
         containerStyle,
         raised && !disabled && type !== 'clear' && styles.raised,
       ]}
-      testID="RNE_BUTTON_WRAPPER">
+      testID="STAR_BUTTON_WRAPPER">
       <TouchableComponentInternal
         onPress={handleOnPress}
         delayPressIn={0}
