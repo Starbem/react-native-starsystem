@@ -9,7 +9,7 @@ import {ListItemTitle} from './ListItem.Title';
 import {ListItemSubtitle} from './ListItem.Subtitle';
 import {ListItemSwipeable, ListItemSwipeableProps} from './ListItem.Swipeable';
 import {ListItemAccordion, ListItemAccordionProps} from './ListItem.Accordion';
-import {RneFunctionComponent} from '../helpers';
+import {StarFunctionComponent} from '../helpers';
 
 const ThemedListItemContent = withTheme(ListItemContent, 'ListItemContent');
 const ThemedListItemChevron = withTheme(ListItemChevron, 'ListItemChevron');
@@ -30,7 +30,7 @@ const ThemedListItemAccordion = withTheme(
   'ListItemAccordion',
 );
 
-export type ListItemProps = RneFunctionComponent<ListItemBaseProps> & {
+export type ListItemProps = StarFunctionComponent<ListItemBaseProps> & {
   Accordion: typeof ThemedListItemAccordion;
   Chevron: typeof ThemedListItemChevron;
   Content: typeof ThemedListItemContent;

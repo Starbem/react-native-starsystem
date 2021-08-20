@@ -1,11 +1,11 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import Divider, {DividerProps} from '../Divider';
-import {RneFunctionComponent} from '../helpers';
+import {StarFunctionComponent} from '../helpers';
 
 export type CardDividerProps = DividerProps;
 
-export const CardDivider: RneFunctionComponent<CardDividerProps> = ({
+export const CardDivider: StarFunctionComponent<CardDividerProps> = ({
   style,
   ...props
 }) => (

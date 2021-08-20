@@ -3,11 +3,11 @@ import {Platform, StyleSheet, TextStyle} from 'react-native';
 import normalize from '../helpers/normalizeText';
 import {fonts} from '../config';
 import Text, {TextProps} from '../Text';
-import {RneFunctionComponent} from '../helpers';
+import {StarFunctionComponent} from '../helpers';
 
 export type CardFeaturedSubtitleProps = TextProps;
 
-export const CardFeaturedSubtitle: RneFunctionComponent<CardFeaturedSubtitleProps> =
+export const CardFeaturedSubtitle: StarFunctionComponent<CardFeaturedSubtitleProps> =
   ({theme, style, ...props}) => (
     <Text
       style={

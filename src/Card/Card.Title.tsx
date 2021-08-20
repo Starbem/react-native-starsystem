@@ -3,11 +3,11 @@ import {Platform, StyleSheet, TextStyle} from 'react-native';
 import normalize from '../helpers/normalizeText';
 import {fonts} from '../config';
 import Text, {TextProps} from '../Text';
-import {RneFunctionComponent} from '../helpers';
+import {StarFunctionComponent} from '../helpers';
 
 type CardTitleProps = TextProps;
 
-export const CardTitle: RneFunctionComponent<CardTitleProps> = ({
+export const CardTitle: StarFunctionComponent<CardTitleProps> = ({
   style,
   theme,
   ...props

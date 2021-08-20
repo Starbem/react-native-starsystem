@@ -1,13 +1,13 @@
 import React from 'react';
 import {StyleSheet, Platform, TextProps} from 'react-native';
-import {RneFunctionComponent} from '../helpers';
+import {StarFunctionComponent} from '../helpers';
 import Text from '../Text';
 
 const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
 
 export type ListItemSubtitleProps = TextProps & {right?: boolean};
 
-export const ListItemSubtitle: RneFunctionComponent<ListItemSubtitleProps> = ({
+export const ListItemSubtitle: StarFunctionComponent<ListItemSubtitleProps> = ({
   style,
   right,
   children,

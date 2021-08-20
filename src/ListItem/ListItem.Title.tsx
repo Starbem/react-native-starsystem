@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Platform, TextProps} from 'react-native';
-import {RneFunctionComponent} from '../helpers';
+import {StarFunctionComponent} from '../helpers';
 import Text from '../Text';
 
 const ANDROID_SECONDARY = 'rgba(0, 0, 0, 0.54)';
@@ -10,7 +10,7 @@ type TitleProps = TextProps & {
   right?: boolean;
 };
 
-export const ListItemTitle: RneFunctionComponent<TitleProps> = ({
+export const ListItemTitle: StarFunctionComponent<TitleProps> = ({
   style,
   right,
   children,

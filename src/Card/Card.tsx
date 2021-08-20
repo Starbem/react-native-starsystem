@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Platform, StyleSheet, StyleProp, ViewStyle} from 'react-native';
-import {RneFunctionComponent} from '../helpers';
+import {StarFunctionComponent} from '../helpers';
 
 export type CardBaseProps = {
   /** Outer container style. */
@@ -9,7 +9,7 @@ export type CardBaseProps = {
   wrapperStyle?: StyleProp<ViewStyle>;
 };
 
-export const CardBase: RneFunctionComponent<CardBaseProps> = ({
+export const CardBase: StarFunctionComponent<CardBaseProps> = ({
   children,
   containerStyle,
   wrapperStyle,

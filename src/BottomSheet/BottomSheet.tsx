@@ -9,7 +9,7 @@ import {
   ModalProps,
   ScrollViewProps,
 } from 'react-native';
-import {RneFunctionComponent, ifIphoneX, getBottomSpace} from '../helpers';
+import {StarFunctionComponent, ifIphoneX, getBottomSpace} from '../helpers';
 
 export type BottomSheetProps = {
   /** Style of the bottom sheet's container. Use this to change the color of the underlay. */
@@ -22,7 +22,7 @@ export type BottomSheetProps = {
   scrollViewProps?: ScrollViewProps;
 };
 
-export const BottomSheet: RneFunctionComponent<BottomSheetProps> = ({
+export const BottomSheet: StarFunctionComponent<BottomSheetProps> = ({
   containerStyle,
   isVisible = false,
   modalProps = {},

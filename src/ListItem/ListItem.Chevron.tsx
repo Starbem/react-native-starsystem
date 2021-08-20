@@ -1,11 +1,11 @@
 import React from 'react';
 import {StyleSheet, Platform} from 'react-native';
-import {RneFunctionComponent} from '../helpers';
+import {StarFunctionComponent} from '../helpers';
 import Icon, {IconProps} from '../Icon';
 
 export type ListItemChevronProps = Partial<IconProps>;
 
-export const ListItemChevron: RneFunctionComponent<ListItemChevronProps> = ({
+export const ListItemChevron: StarFunctionComponent<ListItemChevronProps> = ({
   containerStyle,
   ...props
 }: Partial<IconProps>) => {

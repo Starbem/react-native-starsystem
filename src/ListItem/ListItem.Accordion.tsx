@@ -3,7 +3,7 @@ import {Animated} from 'react-native';
 import {ListItemBase, ListItemBaseProps} from './ListItem';
 import {ListItemContent} from './ListItem.Content';
 import {Icon, IconNode, IconProps} from '../Icon';
-import {RneFunctionComponent} from '../helpers';
+import {StarFunctionComponent} from '../helpers';
 
 export type ListItemAccordionProps = ListItemBaseProps & {
   /** Decide if Accordion is Expanded. */
@@ -27,7 +27,7 @@ export type ListItemAccordionProps = ListItemBaseProps & {
     | boolean;
 };
 
-export const ListItemAccordion: RneFunctionComponent<ListItemAccordionProps> =
+export const ListItemAccordion: StarFunctionComponent<ListItemAccordionProps> =
   ({
     children,
     isExpanded,

@@ -9,7 +9,7 @@ import {
   PanResponderGestureState,
 } from 'react-native';
 import {ListItemBase, ListItemBaseProps} from './ListItem';
-import {RneFunctionComponent, ScreenWidth} from '../helpers';
+import {StarFunctionComponent, ScreenWidth} from '../helpers';
 
 export type ListItemSwipeableProps = ListItemBaseProps & {
   /** Left Content. */
@@ -30,7 +30,7 @@ export type ListItemSwipeableProps = ListItemBaseProps & {
   onRightSwipe?: () => any;
 };
 
-export const ListItemSwipeable: RneFunctionComponent<ListItemSwipeableProps> =
+export const ListItemSwipeable: StarFunctionComponent<ListItemSwipeableProps> =
   ({
     children,
     leftStyle,

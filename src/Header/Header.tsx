@@ -5,7 +5,6 @@ import {
   StyleSheet,
   View,
   ImageBackground,
-  TouchableOpacity,
   StyleProp,
   TextProps,
   ViewProps,
@@ -16,7 +15,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {RneFunctionComponent} from '../helpers';
+import {StarFunctionComponent} from '../helpers';
 import {Children} from './components/HeaderChildren';
 import {HeaderIcon} from './components/HeaderIcon';
 import {colors} from '../config';
@@ -75,7 +74,7 @@ export type HeaderProps = ViewProps & {
   elevated?: boolean;
 };
 
-export const Header: RneFunctionComponent<HeaderProps> = ({
+export const Header: StarFunctionComponent<HeaderProps> = ({
   statusBarProps,
   leftComponent,
   centerComponent,

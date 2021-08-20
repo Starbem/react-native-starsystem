@@ -8,7 +8,7 @@ import {
   ViewProps,
 } from 'react-native';
 import Color from 'color';
-import {RneFunctionComponent} from '../helpers';
+import {StarFunctionComponent} from '../helpers';
 
 const clamp = (value: number): number => Math.max(0, Math.min(value, 1));
 
@@ -31,7 +31,7 @@ export type LinearProgressProps = ViewProps & {
     | boolean;
 };
 
-export const LinearProgress: RneFunctionComponent<LinearProgressProps> = ({
+export const LinearProgress: StarFunctionComponent<LinearProgressProps> = ({
   value,
   variant = value === undefined ? 'indeterminate' : 'determinate',
   color = 'secondary',

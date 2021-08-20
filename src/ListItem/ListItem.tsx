@@ -9,7 +9,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import {PadView} from './components/PadView';
-import {RneFunctionComponent} from '../helpers';
+import {StarFunctionComponent} from '../helpers';
 
 export type ListItemBaseProps = TouchableHighlightProps & {
   /** Additional main container styling. */
@@ -32,7 +32,7 @@ export type ListItemBaseProps = TouchableHighlightProps & {
   children?: any;
 };
 
-export const ListItemBase: RneFunctionComponent<ListItemBaseProps> = props => {
+export const ListItemBase: StarFunctionComponent<ListItemBaseProps> = props => {
   const {
     containerStyle,
     onPress,

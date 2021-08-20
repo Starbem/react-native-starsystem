@@ -17,7 +17,7 @@ import {
 import Color from 'color';
 import getIconType from '../helpers/getIconType';
 import getIconStyle from '../helpers/getIconStyle';
-import {RneFunctionComponent} from '../helpers';
+import {StarFunctionComponent} from '../helpers';
 
 export type IconType =
   | 'material'
@@ -74,7 +74,7 @@ export type IconProps = IconButtonProps & {
   brand?: boolean;
 };
 
-export const Icon: RneFunctionComponent<IconProps> = ({
+export const Icon: StarFunctionComponent<IconProps> = ({
   type = 'material',
   name,
   size = 24,

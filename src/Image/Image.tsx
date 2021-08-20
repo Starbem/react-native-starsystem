@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 import {Text} from '..';
 import {colors} from '../config';
-import {RneFunctionComponent} from '../helpers';
+import {StarFunctionComponent} from '../helpers';
 
 export type ImageProps = RNImageProps & {
   /** Define the component passed to image. */
@@ -38,7 +38,7 @@ export type ImageProps = RNImageProps & {
   transitionDuration?: number;
 };
 
-export const Image: RneFunctionComponent<ImageProps> = ({
+export const Image: StarFunctionComponent<ImageProps> = ({
   onPress,
   onLongPress,
   Component = onPress || onLongPress ? TouchableOpacity : View,

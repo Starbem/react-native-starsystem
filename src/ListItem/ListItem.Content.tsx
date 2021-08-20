@@ -1,11 +1,11 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {RneFunctionComponent} from '../helpers';
+import {StarFunctionComponent} from '../helpers';
 import {TextProps} from '../Text';
 
 export type ListItemContentProps = TextProps & {right?: boolean};
 
-export const ListItemContent: RneFunctionComponent<ListItemContentProps> = ({
+export const ListItemContent: StarFunctionComponent<ListItemContentProps> = ({
   style,
   right,
   children,

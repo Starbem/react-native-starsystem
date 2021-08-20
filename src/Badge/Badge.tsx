@@ -9,7 +9,7 @@ import {
   ViewStyle,
   TextStyle,
 } from 'react-native';
-import {renderNode, RneFunctionComponent} from '../helpers';
+import {renderNode, StarFunctionComponent} from '../helpers';
 
 export type BadgeProps = {
   /** Style for the container. */
@@ -45,7 +45,7 @@ export type BadgeProps = {
     | 'error';
 };
 
-export const Badge: RneFunctionComponent<BadgeProps> = ({
+export const Badge: StarFunctionComponent<BadgeProps> = ({
   containerStyle,
   textStyle,
   textProps,

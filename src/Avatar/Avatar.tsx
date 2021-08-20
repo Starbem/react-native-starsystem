@@ -12,7 +12,7 @@ import {
   ImageURISource,
   ImageStyle,
 } from 'react-native';
-import {renderNode, RneFunctionComponent} from '../helpers';
+import {renderNode, StarFunctionComponent} from '../helpers';
 import Icon, {IconObject} from '../Icon';
 import Image, {ImageProps} from '../Image';
 
@@ -66,7 +66,7 @@ export type AvatarProps = {
   ImageComponent?: React.ComponentClass;
 };
 
-export const Avatar: RneFunctionComponent<AvatarProps> = ({
+export const Avatar: StarFunctionComponent<AvatarProps> = ({
   onPress,
   onLongPress,
   Component = onPress || onLongPress ? TouchableOpacity : View,

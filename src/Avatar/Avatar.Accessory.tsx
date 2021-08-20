@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import Image, {ImageProps} from '../Image';
 import Icon, {IconProps} from '../Icon';
-import {RneFunctionComponent} from '../helpers';
+import {StarFunctionComponent} from '../helpers';
 
 export type AccessoryProps = Partial<IconProps> &
   Partial<ImageProps> & {
@@ -22,7 +22,7 @@ export type AccessoryProps = Partial<IconProps> &
 
 /** This is used for adding an accessory to the Avatar.
  * Receives either all [Icon](icon#props) or [Image](image#props) props. */
-export const Accessory: RneFunctionComponent<AccessoryProps> = ({
+export const Accessory: StarFunctionComponent<AccessoryProps> = ({
   size = 10,
   style,
   underlayColor = '#000',

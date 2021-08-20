@@ -1,11 +1,11 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
-import {RneFunctionComponent} from '../helpers';
+import {StarFunctionComponent} from '../helpers';
 import Image, {ImageProps} from '../Image';
 
 type CardImageProps = ImageProps;
 
-export const CardImage: RneFunctionComponent<CardImageProps> = ({
+export const CardImage: StarFunctionComponent<CardImageProps> = ({
   style,
   ...props
 }) => <Image style={StyleSheet.flatten([styles.image, style])} {...props} />;
