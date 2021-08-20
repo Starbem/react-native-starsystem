@@ -6,7 +6,7 @@
 // import AirbnbRating, {TapRatingProps} from './AirbnbRating';
 import Avatar, {AvatarProps} from './Avatar';
 import Badge, {BadgeProps, withBadge} from './Badge';
-// import BottomSheet, {BottomSheetProps} from './BottomSheet';
+import BottomSheet, {BottomSheetProps} from './BottomSheet';
 import Button, {ButtonProps} from './Button';
 // import ButtonGroup, {ButtonGroupProps} from './ButtonGroup';
 // import Card, {CardProps} from './Card';
@@ -20,11 +20,11 @@ import Icon, {IconProps} from './Icon';
 import Image, {ImageProps} from './Image';
 // import Input, {InputProps} from './Input';
 // import LinearProgress, {LinearProgressProps} from './LinearProgress';
-// import ListItem, {
-//   ListItemProps,
-//   ListItemAccordionProps,
-//   ListItemSwipeableProps,
-// } from './ListItem';
+import ListItem, {
+  ListItemProps,
+  ListItemAccordionProps,
+  ListItemSwipeableProps,
+} from './ListItem';
 // import Overlay, {OverlayProps} from './Overlay';
 // import PricingCard, {PricingCardProps} from './PricingCard';
 // import Rating, {SwipeRatingProps} from './Rating';
@@ -61,13 +61,19 @@ import {
 } from './config';
 import getIconType, {registerCustomIconType} from './helpers/getIconType';
 import normalize from './helpers/normalizeText';
+import {
+  getBottomSpace,
+  getStatusBarHeight,
+  isIphoneX,
+  ifIphoneX,
+} from './helpers/iphoneX';
 
 // Components exports
 export {
   // AirbnbRating,
   Avatar,
   Badge,
-  // BottomSheet,
+  BottomSheet,
   Button,
   // ButtonGroup,
   // Card,
@@ -81,7 +87,7 @@ export {
   Image,
   // Input,
   // LinearProgress,
-  // ListItem,
+  ListItem,
   // Overlay,
   // PricingCard,
   // Rating,
@@ -112,11 +118,14 @@ export {
   makeStyles,
 };
 
+// Functions utils exports
+export {getBottomSpace, getStatusBarHeight, isIphoneX, ifIphoneX};
+
 // Components Props exports
 export type {
   AvatarProps,
   BadgeProps,
-  // BottomSheetProps,
+  BottomSheetProps,
   // ButtonGroupProps,
   ButtonProps,
   // CardProps,
@@ -132,9 +141,9 @@ export type {
   ImageProps,
   // InputProps,
   // LinearProgressProps,
-  // ListItemAccordionProps,
-  // ListItemProps,
-  // ListItemSwipeableProps,
+  ListItemAccordionProps,
+  ListItemProps,
+  ListItemSwipeableProps,
   // OverlayProps,
   // PricingCardProps,
   // SearchBarAndroidProps,
