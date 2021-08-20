@@ -186,12 +186,14 @@ export const Button: RneFunctionComponent<ButtonProps> = ({
       color:
         type === 'solid'
           ? (textColor && colors[textColor]) || 'white'
-          : theme?.colors?.primary,
+          : (variant && colors[variant]) || theme?.colors?.primary,
     },
     styles.title,
     passedTitleStyle,
     disabled && {
-      color: color(theme?.colors?.white).darken(0.3).string(),
+      color: textColor
+        ? colors[textColor]
+        : color(theme?.colors?.white).darken(0.3).string(),
     },
     disabled && disabledTitleStyle,
   ]);
