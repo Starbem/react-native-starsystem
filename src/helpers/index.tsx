@@ -3,6 +3,12 @@ import color from 'color';
 import renderNode from './renderNode';
 import getIconType from './getIconType';
 import normalizeText from './normalizeText';
+import {
+  getBottomSpace,
+  getStatusBarHeight,
+  ifIphoneX,
+  isIphoneX,
+} from './iphoneX';
 import {ThemeProps} from '../config';
 
 const Screen = Dimensions.get('window');
@@ -22,6 +28,10 @@ export {
   renderNode,
   getIconType,
   normalizeText,
+  getBottomSpace,
+  getStatusBarHeight,
+  ifIphoneX,
+  isIphoneX,
   ScreenWidth,
   ScreenHeight,
   isIOS,
