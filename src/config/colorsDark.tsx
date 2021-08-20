@@ -1,9 +1,11 @@
 import {StyleSheet} from 'react-native';
 import {Colors} from './colors';
 
-const darkColors: Colors = {
-  primary: '#439ce0',
-  secondary: '#aa49eb',
+const colorsDark: Colors = {
+  primary: '#FF6B19',
+  primaryLight: '#FF9B00',
+  secondary: '#FF3F72',
+  secondaryLight: '#FFE4EB',
   white: '#080808',
   black: '#f2f2f2',
   grey5: '#393e42',
@@ -60,4 +62,4 @@ const darkColors: Colors = {
   },
 };
 
-export default darkColors;
+export default colorsDark;

@@ -22,7 +22,7 @@
   <a href="https://codecov.io/gh/react-native-elements/react-native-elements"><img src="https://codecov.io/gh/react-native-elements/react-native-elements/coverage.svg"></a>
   <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg"></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
-  
+
 </p> -->
 
 <br />
@@ -42,7 +42,7 @@ to install React Native StarSystem!
 Start using the components or try it on Snack
 
 ```js
-import { Button } from 'react-native-starsystem';
+import {Button} from 'react-native-starsystem';
 
 <Button />;
 ```
@@ -101,7 +101,7 @@ view the implementation & run the RNE expo app locally. -->
 <!-- ## Documentation
 
 [View the full docs here](https://reactnativeelements.com/docs/overview) -->
-<!-- 
+<!--
 ## Contributing
 
 Interested in contributing to this repo? Check out our
