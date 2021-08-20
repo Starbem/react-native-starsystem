@@ -17,7 +17,7 @@ import Button, {ButtonProps} from './Button';
 // import FAB, {FABProps} from './FAB';
 // import Header, {HeaderProps} from './Header';
 import Icon, {IconProps} from './Icon';
-// import Image, {ImageProps} from './Image';
+import Image, {ImageProps} from './Image';
 // import Input, {InputProps} from './Input';
 // import LinearProgress, {LinearProgressProps} from './LinearProgress';
 // import ListItem, {
@@ -78,7 +78,7 @@ export {
   // FAB,
   // Header,
   Icon,
-  // Image,
+  Image,
   // Input,
   // LinearProgress,
   // ListItem,
@@ -129,7 +129,7 @@ export type {
   // FABProps,
   // HeaderProps,
   IconProps,
-  // ImageProps,
+  ImageProps,
   // InputProps,
   // LinearProgressProps,
   // ListItemAccordionProps,
