@@ -25,7 +25,7 @@ const App = () => {
           <Tab.Item title="Recentes" titleColor="black" />
           <Tab.Item title="Favoritos" titleColor="black" />
           <Tab.Item title="Carinho" titleColor="black" />
-          <Tab.Item title="Compras" titleColor="black" />
+          <Tab.Item title="Carinho" titleColor="black" />
         </Tab>
 
         <TabView value={index} onChange={setIndex}>

@@ -6,6 +6,7 @@ import {colors} from '../config';
 import Color from 'color';
 
 export type TabItemProps = ButtonProps & {
+  childs?: number;
   /** Allows to define if TabItem is active. */
   active?: boolean;
   /** Define the background for active tab */
@@ -45,6 +46,7 @@ export type TabItemProps = ButtonProps & {
 };
 
 export const TabItem: StarFunctionComponent<TabItemProps> = ({
+  childs = 0,
   active,
   activeColor,
   titleStyle,
@@ -74,6 +76,7 @@ export const TabItem: StarFunctionComponent<TabItemProps> = ({
         styles.containerStyle,
         // eslint-disable-next-line react-native/no-inline-styles
         {
+          width: childs < 3 ? ScreenWidth / childs : ScreenWidth / 3,
           backgroundColor:
             active && activeColor
               ? Color(colors[activeColor]).alpha(0.2).rgb().toString()
@@ -99,7 +102,6 @@ const styles = StyleSheet.create({
   },
   containerStyle: {
     flex: 1,
-    width: ScreenWidth / 3,
     height: 48,
     borderRadius: 0,
   },

@@ -61,7 +61,10 @@ export const TabBase: StarFunctionComponent<TabBaseProps> = ({
     }).start();
   }, [animation, value]);
 
-  const WIDTH = dim.width / 3;
+  const WIDTH =
+    React.Children.count(children) > 2
+      ? dim.width / 3
+      : dim.width / React.Children.count(children);
 
   return (
     <View>
@@ -84,6 +87,7 @@ export const TabBase: StarFunctionComponent<TabBaseProps> = ({
         onLayout={({nativeEvent: {layout}}) => setDim(Object(layout))}>
         {React.Children.map(children, (child, index) => {
           return React.cloneElement(child as React.ReactElement<TabItemProps>, {
+            childs: React.Children.count(children),
             onPress: () => onChange(index),
             active: index === value,
             variant,
