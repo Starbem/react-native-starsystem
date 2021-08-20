@@ -10,7 +10,7 @@ import BottomSheet, {BottomSheetProps} from './BottomSheet';
 import Button, {ButtonProps} from './Button';
 // import ButtonGroup, {ButtonGroupProps} from './ButtonGroup';
 import Card, {CardProps} from './Card';
-// import CheckBox, {CheckBoxProps} from './CheckBox';
+import CheckBox, {CheckBoxProps} from './CheckBox';
 // import Chip, {ChipProps} from './Chip';
 // import Dialog, {DialogLoadingProps, DialogTitleProps} from './Dialog';
 import Divider, {DividerProps} from './Divider';
@@ -37,7 +37,7 @@ import ListItem, {
 // import Slider, {SliderProps} from './Slider';
 // import SocialIcon, {SocialIconProps} from './SocialIcon';
 // import SpeedDial, {SpeedDialActionProps, SpeedDialProps} from './SpeedDial';
-// import Switch, {SwitchProps} from './Switch';
+import Switch, {SwitchProps} from './Switch';
 // import Tab, {TabItemProps, TabProps} from './Tab';
 // import TabView, {TabViewProps} from './TabView';
 import Text, {TextProps} from './Text';
@@ -77,7 +77,7 @@ export {
   Button,
   // ButtonGroup,
   Card,
-  // CheckBox,
+  CheckBox,
   // Chip,
   // Dialog,
   Divider,
@@ -95,7 +95,7 @@ export {
   // Slider,
   // SocialIcon,
   // SpeedDial,
-  // Switch,
+  Switch,
   // Tab,
   // TabView,
   Text,
@@ -129,7 +129,7 @@ export type {
   // ButtonGroupProps,
   ButtonProps,
   CardProps,
-  // CheckBoxProps,
+  CheckBoxProps,
   // ChipProps,
   Colors,
   // DialogLoadingProps,
@@ -155,7 +155,7 @@ export type {
   // SpeedDialActionProps,
   // SpeedDialProps,
   // SwipeRatingProps,
-  // SwitchProps,
+  SwitchProps,
   // TabItemProps,
   // TabProps,
   // TabViewProps,

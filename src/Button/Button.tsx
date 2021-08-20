@@ -15,7 +15,7 @@ import {
   TextStyle,
 } from 'react-native';
 import Color from 'color';
-import {renderNode, color, RneFunctionComponent} from '../helpers';
+import {renderNode, color, StarFunctionComponent} from '../helpers';
 import {colors} from '../config';
 import Icon, {IconNode} from '../Icon';
 import {Theme} from '../config/theme';
@@ -130,7 +130,7 @@ export type ButtonProps = TouchableOpacityProps &
       | undefined;
   };
 
-export const Button: RneFunctionComponent<ButtonProps> = ({
+export const Button: StarFunctionComponent<ButtonProps> = ({
   TouchableComponent,
   containerStyle,
   onPress = () => console.log('Please attach a method to this component'),
