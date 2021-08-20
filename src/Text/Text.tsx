@@ -8,7 +8,7 @@ import {
   StyleProp,
 } from 'react-native';
 import {fonts, colors} from '../config';
-import {patchWebProps, RneFunctionComponent} from '../helpers';
+import {patchWebProps, StarFunctionComponent} from '../helpers';
 import normalize from '../helpers/normalizeText';
 
 export type TextProps = TextProperties & {
@@ -55,7 +55,7 @@ export type TextProps = TextProperties & {
   overlineStyle?: StyleProp<TextStyle>;
 };
 
-export const Text: RneFunctionComponent<TextProps> = ({
+export const Text: StarFunctionComponent<TextProps> = ({
   color = 'black',
   style = {},
   h1 = false,

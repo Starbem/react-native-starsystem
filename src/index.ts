@@ -38,8 +38,8 @@ import ListItem, {
 // import SocialIcon, {SocialIconProps} from './SocialIcon';
 // import SpeedDial, {SpeedDialActionProps, SpeedDialProps} from './SpeedDial';
 import Switch, {SwitchProps} from './Switch';
-// import Tab, {TabItemProps, TabProps} from './Tab';
-// import TabView, {TabViewProps} from './TabView';
+import Tab, {TabItemProps, TabProps} from './Tab';
+import TabView, {TabViewProps} from './TabView';
 import Text, {TextProps} from './Text';
 // import Tile, {TileProps} from './Tile';
 // import Tooltip, {TooltipProps} from './Tooltip';
@@ -96,8 +96,8 @@ export {
   // SocialIcon,
   // SpeedDial,
   Switch,
-  // Tab,
-  // TabView,
+  Tab,
+  TabView,
   Text,
   // Tile,
   // Tooltip,
@@ -156,9 +156,9 @@ export type {
   // SpeedDialProps,
   // SwipeRatingProps,
   SwitchProps,
-  // TabItemProps,
-  // TabProps,
-  // TabViewProps,
+  TabItemProps,
+  TabProps,
+  TabViewProps,
   // TapRatingProps,
   TextProps,
   // TileProps,
