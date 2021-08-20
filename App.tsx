@@ -6,7 +6,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-import {Button} from './src';
+import {Text} from './src';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
@@ -24,7 +24,7 @@ const App = () => {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <View style={{padding: 13}}>
-          <Button title="Teste" variant="secondary" disabled />
+          <Text color="secondary">Teste</Text>
         </View>
       </ScrollView>
     </SafeAreaView>

@@ -40,7 +40,7 @@ import Icon, {IconProps} from './Icon';
 // import Switch, {SwitchProps} from './Switch';
 // import Tab, {TabItemProps, TabProps} from './Tab';
 // import TabView, {TabViewProps} from './TabView';
-// import Text, {TextProps} from './Text';
+import Text, {TextProps} from './Text';
 // import Tile, {TileProps} from './Tile';
 // import Tooltip, {TooltipProps} from './Tooltip';
 
@@ -92,7 +92,7 @@ export {
   // Switch,
   // Tab,
   // TabView,
-  // Text,
+  Text,
   // Tile,
   // Tooltip,
 };
@@ -151,7 +151,7 @@ export type {
   // TabProps,
   // TabViewProps,
   // TapRatingProps,
-  // TextProps,
+  TextProps,
   // TileProps,
   // TooltipProps,
 };
