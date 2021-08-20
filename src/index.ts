@@ -19,7 +19,7 @@ import Button, {ButtonProps} from './Button';
 import Icon, {IconProps} from './Icon';
 import Image, {ImageProps} from './Image';
 import Input, {InputProps} from './Input';
-// import LinearProgress, {LinearProgressProps} from './LinearProgress';
+import LinearProgress, {LinearProgressProps} from './LinearProgress';
 import ListItem, {
   ListItemProps,
   ListItemAccordionProps,
@@ -86,7 +86,7 @@ export {
   Icon,
   Image,
   Input,
-  // LinearProgress,
+  LinearProgress,
   ListItem,
   // Overlay,
   // PricingCard,
@@ -140,7 +140,7 @@ export type {
   IconProps,
   ImageProps,
   InputProps,
-  // LinearProgressProps,
+  LinearProgressProps,
   ListItemAccordionProps,
   ListItemProps,
   ListItemSwipeableProps,
