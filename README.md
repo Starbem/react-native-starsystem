@@ -54,8 +54,6 @@ import {Button} from 'react-native-starsystem';
 
 As a cross platform UI Toolkit, you can now use RN Star System on the web & share your codebase between your React Native + React web apps. RNE components are rendered perfectly on browser. You can achieve this to target iOS, Android and Web by collaborating RNE and [React Native for Web](https://github.com/necolas/react-native-web).
 
-Click [here](https://reactnativeelements.com/blog/2018/12/13/react-native-web) for a full walkthrough using React Native Elements + React Native Web.
-
 ## Documentation
 
 [View the full docs here](https://starsystem.starbem.app/docs/overview)
