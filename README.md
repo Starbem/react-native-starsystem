@@ -1,29 +1,12 @@
-<!-- <p align="center">
+<p align="center">
   <a href="https://starbem.app/">
-    <img alt="starbem" src="https://user-images.githubusercontent.com/5962998/65694309-a825f000-e043-11e9-8382-db0dba0851e3.png" width="300">
+    <img alt="starbem" src="https://starbem-site-cms.s3.amazonaws.com/images/Starbem_logo_b001241faf.png" width="300">
   </a>
-</p> -->
+</p>
 
 <p align="center">
   Cross Platform <a href="https://reactnative.dev">React Native</a> UI Toolkit
 </p>
-
-<!-- <p align="center">
-  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/v/react-native-elements.svg"></a>
-  <a href="https://travis-ci.org/react-native-elements/react-native-elements"><img src="https://img.shields.io/travis/react-native-elements/react-native-elements/master.svg"></a>
-  <a href="https://github.com/react-native-elements/react-native-elements"><img src="https://img.shields.io/github/stars/react-native-elements/react-native-elements"></a>
-  <a href="https://www.npmjs.com/package/react-native-elements"><img src="https://img.shields.io/npm/dm/react-native-elements.svg"></a>
-  <a href="https://react-native-elements-slack.herokuapp.com"><img src="https://react-native-elements-slack.herokuapp.com/badge.svg"></a>
-</p>
-
-<p align="center">
-  <a href="#backers"><img src="https://opencollective.com/react-native-elements/backers/badge.svg"></a>
-  <a href="#sponsors"><img src="https://opencollective.com/react-native-elements/sponsors/badge.svg"></a>
-  <a href="https://codecov.io/gh/react-native-elements/react-native-elements"><img src="https://codecov.io/gh/react-native-elements/react-native-elements/coverage.svg"></a>
-  <a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/styled_with-prettier-ff69b4.svg"></a>
-  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"></a>
-
-</p> -->
 
 <br />
 
@@ -34,8 +17,8 @@
 ### Installation
 
 Follow
-[these instructions](https://starbem.app)
-to install React Native StarSystem!
+[these instructions](https://starsystem.starbem.app)
+to install React Native Star System!
 
 ### Usage
 
@@ -47,63 +30,39 @@ import {Button} from 'react-native-starsystem';
 <Button />;
 ```
 
-<!-- ## Components included:
+## Components included:
 
-- [x] [Avatar](https://reactnativeelements.com/docs/avatar)
-- [x] [Badge](https://reactnativeelements.com/docs/badge)
-- [x] [BottomSheet](https://reactnativeelements.com/docs/bottomsheet)
-- [x] [Button](https://reactnativeelements.com/docs/button)
-- [x] [ButtonGroup](https://reactnativeelements.com/docs/button_group)
-- [x] [Card](https://reactnativeelements.com/docs/card)
-- [x] [CheckBox](https://reactnativeelements.com/docs/checkbox)
-- [x] [Divider](https://reactnativeelements.com/docs/divider)
-- [x] [FAB](https://reactnativeelements.com/docs/fab)
-- [x] [Header](https://reactnativeelements.com/docs/header)
-- [x] [HTML style headings](https://reactnativeelements.com/docs/text)
-- [x] [Icon](https://reactnativeelements.com/docs/icon)
-- [x] [Image](https://reactnativeelements.com/docs/image)
-- [x] [Input](https://reactnativeelements.com/docs/input)
-- [x] [ListItem](https://reactnativeelements.com/docs/listitem)
-- [x] [Linear Progress](https://reactnativeelements.com/docs/linearProgress)
-- [x] [Overlay](https://reactnativeelements.com/docs/overlay)
-- [x] [Pricing](https://reactnativeelements.com/docs/pricing)
-- [x] [Rating](https://reactnativeelements.com/docs/rating)
-- [x] [SearchBar](https://reactnativeelements.com/docs/searchbar)
-- [x] [Slider](https://reactnativeelements.com/docs/slider)
-- [x] [Social Icons / Social Icon Buttons](https://reactnativeelements.com/docs/social_icon)
-- [x] [Speed Dial](https://reactnativeelements.com/docs/speeddial)
-- [x] [Switch](https://reactnativeelements.com/docs/switch)
-- [x] [Tile](https://reactnativeelements.com/docs/tile)
-- [x] [Tab](https://reactnativeelements.com/docs/tab)
-- [x] [TabView](https://reactnativeelements.com/docs/tab#tabview)
-- [x] [Tooltip](https://reactnativeelements.com/docs/tooltip) -->
+- [x] [Avatar](https://starsystem.starbem.app/docs/avatar)
+- [x] [Badge](https://starsystem.starbem.app/docs/badge)
+- [x] [BottomSheet](https://starsystem.starbem.app/docs/bottomsheet)
+- [x] [Button](https://starsystem.starbem.app/docs/button)
+- [x] [Card](https://starsystem.starbem.app/docs/card)
+- [x] [CheckBox](https://starsystem.starbem.app/docs/checkbox)
+- [x] [Divider](https://starsystem.starbem.app/docs/divider)
+- [x] [Header](https://starsystem.starbem.app/docs/header)
+- [x] [Icon](https://starsystem.starbem.app/docs/icon)
+- [x] [Image](https://starsystem.starbem.app/docs/image)
+- [x] [Input](https://starsystem.starbem.app/docs/input)
+- [x] [ListItem](https://starsystem.starbem.app/docs/listitem)
+- [x] [Linear Progress](https://starsystem.starbem.app/docs/linearProgress)
+- [x] [Switch](https://starsystem.starbem.app/docs/switch)
+- [x] [Tile](https://starsystem.starbem.app/docs/tile)
+- [x] [Tab](https://starsystem.starbem.app/docs/tab)
+- [x] [TabView](https://starsystem.starbem.app/docs/tab#tabview)
 
-<!-- ## [Universe Components](https://www.npmjs.com/package/react-native-elements-universe)
+## React Native Web support
 
-- [x] [Circular Slider](https://reactnativeelements.com/docs/) -->
+As a cross platform UI Toolkit, you can now use RN Star System on the web & share your codebase between your React Native + React web apps. RNE components are rendered perfectly on browser. You can achieve this to target iOS, Android and Web by collaborating RNE and [React Native for Web](https://github.com/necolas/react-native-web).
 
-<!-- ## React Native Web support
+Click [here](https://reactnativeelements.com/blog/2018/12/13/react-native-web) for a full walkthrough using React Native Elements + React Native Web.
 
-As a cross platform UI Toolkit, you can now use RNE on the web & share your codebase between your React Native + React web apps. RNE components are rendered perfectly on browser. You can achieve this to target iOS, Android and Web by collaborating RNE and [React Native for Web](https://github.com/necolas/react-native-web).
+## Documentation
 
-Click [here](https://reactnativeelements.com/blog/2018/12/13/react-native-web) for a full walkthrough using React Native Elements + React Native Web. -->
+[View the full docs here](https://starsystem.starbem.app/docs/overview)
 
-<!-- ## Demo App
 
-Checkout the official
-[React Native Elements App](https://expo.io/@flyingcircle/projects/react-native-elements-app)
-on Expo which uses all of the React Native Elements components.
-
-If you are looking to contribute to the React Native Elements App, click
-[here](https://github.com/react-native-elements/react-native-elements-app) to
-view the implementation & run the RNE expo app locally. -->
-
-<!-- ## Documentation
-
-[View the full docs here](https://reactnativeelements.com/docs/overview) -->
-<!--
 ## Contributing
 
 Interested in contributing to this repo? Check out our
-[Contributing Guide](https://reactnativeelements.com/docs/contributing)
-and submit a PR for a new feature/bug fix. -->
+[Contributing Guide](https://starsystem.starbem.app/docs/contributing)
+and submit a PR for a new feature/bug fix.
