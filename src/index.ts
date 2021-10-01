@@ -1,9 +1,13 @@
+import AnimatedView, {AnimatedProps} from './AnimatedView';
+import AnimatedImage from './AnimatedImage';
+import AnimatedText from './AnimatedText';
 import Avatar, {AvatarProps} from './Avatar';
 import Badge, {BadgeProps, withBadge} from './Badge';
 import BottomSheet, {BottomSheetProps} from './BottomSheet';
 import Button, {ButtonProps} from './Button';
 import Card, {CardProps} from './Card';
 import CheckBox, {CheckBoxProps} from './CheckBox';
+import ContentBox, {ContentBoxProps} from './ContentBox';
 import Divider, {DividerProps} from './Divider';
 import Header, {HeaderProps} from './Header';
 import Icon, {IconProps} from './Icon';
@@ -46,12 +50,16 @@ import {
 
 // Components exports
 export {
+  AnimatedView,
+  AnimatedImage,
+  AnimatedText,
   Avatar,
   Badge,
   BottomSheet,
   Button,
   Card,
   CheckBox,
+  ContentBox,
   Divider,
   Header,
   Icon,
@@ -85,12 +93,14 @@ export {getBottomSpace, getStatusBarHeight, isIphoneX, ifIphoneX};
 
 // Components Props exports
 export type {
+  AnimatedProps,
   AvatarProps,
   BadgeProps,
   BottomSheetProps,
   ButtonProps,
   CardProps,
   CheckBoxProps,
+  ContentBoxProps,
   Colors,
   DividerProps,
   HeaderProps,

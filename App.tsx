@@ -1,27 +1,18 @@
 import React from 'react';
-import {StatusBar, useColorScheme, View} from 'react-native';
+import {StatusBar, useColorScheme, ImageBackground} from 'react-native';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {Header, Tab, TabView, Text} from './src';
+import {Button, Text, ContentBox} from './src';
+import bg from './src/helpers/images/stepOne.png';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
-  const [index, setIndex] = React.useState(1);
+  // const [index, setIndex] = React.useState(1);
 
   return (
     <SafeAreaProvider>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <View style={{padding: 0}}>
-        <Header
-          placement="left"
-          backgroundColor="secondary"
-          centerComponent={{
-            text: 'Agendar Consulta',
-            style: {color: '#fff', fontSize: 16},
-          }}
-        />
-      </View>
-      <View style={{flex: 1}}>
-        <Tab value={index} onChange={setIndex}>
+      <ImageBackground source={bg} style={{flex: 1}}>
+        {/* <Tab value={index} onChange={setIndex}>
           <Tab.Item title="Recentes" titleColor="black" />
           <Tab.Item title="Favoritos" titleColor="black" />
           <Tab.Item title="Carinho" titleColor="black" />
@@ -38,8 +29,18 @@ const App = () => {
           <TabView.Item style={{width: '100%'}}>
             <Text h1>Cart</Text>
           </TabView.Item>
-        </TabView>
-      </View>
+        </TabView> */}
+        <ContentBox
+          topContent={<Text h2>Go to Login</Text>}
+          centerContent={
+            <Text>
+              The standard chunk of Lorem Ipsum used since the 1500s is
+              reproduced below for those interested.
+            </Text>
+          }
+          bottomContent={<Button title="Ok, Vamos" variant="secondary" />}
+        />
+      </ImageBackground>
     </SafeAreaProvider>
   );
 };
