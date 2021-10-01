@@ -1,8 +1,9 @@
 import React from 'react';
-import {StatusBar, useColorScheme, ImageBackground} from 'react-native';
+import {StatusBar, useColorScheme, View} from 'react-native';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
-import {Button, Text, ContentBox} from './src';
-import bg from './src/helpers/images/stepOne.png';
+import {Input, colors} from './src';
+// @ts-ignore
+// import bg from './src/helpers/images/stepOne.png';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -11,8 +12,35 @@ const App = () => {
   return (
     <SafeAreaProvider>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ImageBackground source={bg} style={{flex: 1}}>
-        {/* <Tab value={index} onChange={setIndex}>
+
+      <View style={{paddingHorizontal: 16, paddingTop: 100}}>
+        <Input placeholder="Email" placeholderTextColor={colors.grey1} />
+        <Input
+          placeholder="Password"
+          containerStyle={{marginTop: 20}}
+          placeholderTextColor={colors.grey1}
+        />
+
+        {/* <Button title="Solid Button" style={{marginBottom: 10}} />
+
+        <Button
+          title="Outline button"
+          type="outline"
+          variant="secondary"
+          style={{marginBottom: 10}}
+        />
+
+        <Button title="Clear button" type="clear" style={{marginBottom: 10}} />
+
+        <Button
+          title="Loading button"
+          variant="secondary"
+          loading
+          style={{marginBottom: 10}}
+        /> */}
+      </View>
+      {/* <ImageBackground source={bg} style={{flex: 1}}> */}
+      {/* <Tab value={index} onChange={setIndex}>
           <Tab.Item title="Recentes" titleColor="black" />
           <Tab.Item title="Favoritos" titleColor="black" />
           <Tab.Item title="Carinho" titleColor="black" />
@@ -30,7 +58,7 @@ const App = () => {
             <Text h1>Cart</Text>
           </TabView.Item>
         </TabView> */}
-        <ContentBox
+      {/* <ContentBox
           topContent={<Text h2>Go to Login</Text>}
           centerContent={
             <Text>
@@ -39,8 +67,8 @@ const App = () => {
             </Text>
           }
           bottomContent={<Button title="Ok, Vamos" variant="secondary" />}
-        />
-      </ImageBackground>
+        /> */}
+      {/* </ImageBackground> */}
     </SafeAreaProvider>
   );
 };

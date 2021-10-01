@@ -150,7 +150,6 @@ export const Input: StarFunctionComponent<
               {
                 color: theme?.colors?.black,
                 fontSize: 14,
-                flex: 1,
                 minHeight: 48,
               },
               inputStyle,
@@ -198,6 +197,7 @@ export const Input: StarFunctionComponent<
 const styles = StyleSheet.create({
   container: {
     width: '100%',
+    height: 48,
   },
   disabledInput: {
     opacity: 0.5,
