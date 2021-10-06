@@ -2,12 +2,11 @@ import React from 'react';
 import {
   Text as NativeText,
   StyleSheet,
-  Platform,
   TextProps as TextProperties,
   TextStyle,
   StyleProp,
 } from 'react-native';
-import {fonts, colors} from '../config';
+import {colors} from '../config';
 import {patchWebProps, StarFunctionComponent} from '../helpers';
 import normalize from '../helpers/normalizeText';
 
@@ -83,20 +82,12 @@ export const Text: StarFunctionComponent<TextProps> = ({
       accessibilityRole="text"
       style={StyleSheet.flatten([
         {
-          ...Platform.select({
-            android: {
-              ...(fonts.default.regular as TextStyle),
-            },
-            ios: {
-              ...(fonts.default.regular as TextStyle),
-            },
-          }),
           color: color ? colors[color] : theme?.colors?.black,
         },
         style,
         (h1 || h2 || h3 || h4 || h5 || h6 || caption || overline) &&
-          (styles.bold as TextStyle),
-        h1 && StyleSheet.flatten([{fontSize: normalize(36)}, h1Style]),
+          h1 &&
+          StyleSheet.flatten([{fontSize: normalize(36)}, h1Style]),
         h2 && StyleSheet.flatten([{fontSize: normalize(30)}, h2Style]),
         h3 && StyleSheet.flatten([{fontSize: normalize(24)}, h3Style]),
         h4 && StyleSheet.flatten([{fontSize: normalize(18)}, h4Style]),
@@ -112,18 +103,5 @@ export const Text: StarFunctionComponent<TextProps> = ({
     </NativeText>
   );
 };
-
-const styles = StyleSheet.create({
-  bold: {
-    ...Platform.select({
-      android: {
-        ...(fonts.default as TextStyle),
-      },
-      ios: {
-        ...(fonts.default as TextStyle),
-      },
-    }),
-  },
-});
 
 Text.displayName = 'Text';
