@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
   bold: {
     ...Platform.select({
       android: {
-        ...(fonts.android.bold as TextStyle),
+        ...(fonts.default as TextStyle),
       },
     }),
   },

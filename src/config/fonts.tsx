@@ -35,5 +35,14 @@ export default {
       fontWeight: 'bold',
     },
   },
-  default: {},
+  default: {
+    regular: {
+      fontFamily: 'Muli',
+      fontWeight: 'normal',
+    },
+    bold: {
+      fontFamily: 'Muli-SemiBold',
+      fontWeight: 'bold',
+    },
+  },
 };

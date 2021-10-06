@@ -27,6 +27,8 @@ import Text, {TextProps} from './Text';
 import {
   Colors,
   colors,
+  fonts,
+  BackgroundImage,
   ThemeProvider,
   ThemeConsumer,
   ThemeContext,
@@ -55,6 +57,7 @@ export {
   AnimatedText,
   Avatar,
   Badge,
+  BackgroundImage,
   BottomSheet,
   Button,
   Card,
@@ -76,6 +79,7 @@ export {
 // Theme utils exports
 export {
   colors,
+  fonts,
   getIconType,
   registerCustomIconType,
   normalize,
