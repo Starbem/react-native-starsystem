@@ -1,3 +1,18 @@
+export interface Fonts {
+  readonly defalt: {
+    regular: {
+      regular: {
+        fontFamily: string;
+        fontWeight: string;
+      };
+      bold: {
+        fontFamily: string;
+        fontWeight: string;
+      };
+    };
+  };
+}
+
 export default {
   android: {
     regular: {

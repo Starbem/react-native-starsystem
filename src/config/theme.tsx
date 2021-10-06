@@ -4,6 +4,7 @@ import {BottomSheetProps} from '../BottomSheet';
 import {ButtonProps} from '../Button';
 import {CardProps} from '../Card';
 import {CheckBoxProps} from '../CheckBox';
+import {ContentBoxProps} from '../ContentBox';
 import {DividerProps} from '../Divider';
 import {HeaderProps} from '../Header';
 import {IconProps} from '../Icon';
@@ -18,9 +19,11 @@ import {TextProps} from '../Text';
 import {ViewProps} from 'react-native';
 
 import colors, {Colors} from './colors';
+import fonts, {Fonts} from './fonts';
 
 export default {
   colors,
+  fonts,
 };
 
 type RecursivePartial<T> = {[P in keyof T]?: RecursivePartial<T[P]>};
@@ -38,6 +41,7 @@ export interface FullTheme {
   CardImage: Partial<ImageProps>;
   CardTitle: Partial<TextProps>;
   CheckBox: Partial<CheckBoxProps>;
+  ContentBox: Partial<ContentBoxProps>;
   Divider: Partial<DividerProps>;
   Header: Partial<HeaderProps>;
   Icon: Partial<IconProps>;
@@ -59,6 +63,7 @@ export interface FullTheme {
   TabViewItem: Partial<ViewProps>;
   Text: Partial<TextProps>;
   colors: RecursivePartial<Colors>;
+  fonts: RecursivePartial<Fonts>;
 }
 
 export type Theme<T = {}> = Partial<FullTheme> & T;
