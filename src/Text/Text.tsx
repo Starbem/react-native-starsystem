@@ -85,7 +85,10 @@ export const Text: StarFunctionComponent<TextProps> = ({
         {
           ...Platform.select({
             android: {
-              ...(fonts.android.regular as TextStyle),
+              ...(fonts.default.regular as TextStyle),
+            },
+            ios: {
+              ...(fonts.default.regular as TextStyle),
             },
           }),
           color: color ? colors[color] : theme?.colors?.black,
@@ -114,6 +117,9 @@ const styles = StyleSheet.create({
   bold: {
     ...Platform.select({
       android: {
+        ...(fonts.default as TextStyle),
+      },
+      ios: {
         ...(fonts.default as TextStyle),
       },
     }),
