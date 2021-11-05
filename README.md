@@ -32,12 +32,16 @@ import {Button} from 'react-native-starsystem';
 
 ## Components included:
 
+- [x] [AnimatedImage](https://starsystem.starbem.app/docs/AnimatedImage)
+- [x] [AnimatedText](https://starsystem.starbem.app/docs/AnimatedText)
+- [x] [AnimatedView](https://starsystem.starbem.app/docs/AnimatedView)
 - [x] [Avatar](https://starsystem.starbem.app/docs/avatar)
 - [x] [Badge](https://starsystem.starbem.app/docs/badge)
 - [x] [BottomSheet](https://starsystem.starbem.app/docs/bottomsheet)
 - [x] [Button](https://starsystem.starbem.app/docs/button)
 - [x] [Card](https://starsystem.starbem.app/docs/card)
 - [x] [CheckBox](https://starsystem.starbem.app/docs/checkbox)
+- [x] [ContentBox](https://starsystem.starbem.app/docs/contentBox)
 - [x] [Divider](https://starsystem.starbem.app/docs/divider)
 - [x] [Header](https://starsystem.starbem.app/docs/header)
 - [x] [Icon](https://starsystem.starbem.app/docs/icon)
@@ -49,6 +53,7 @@ import {Button} from 'react-native-starsystem';
 - [x] [Tile](https://starsystem.starbem.app/docs/tile)
 - [x] [Tab](https://starsystem.starbem.app/docs/tab)
 - [x] [TabView](https://starsystem.starbem.app/docs/tab#tabview)
+- [x] [Text](https://starsystem.starbem.app/docs/text)
 
 ## React Native Web support
 
@@ -57,7 +62,6 @@ As a cross platform UI Toolkit, you can now use RN Star System on the web & shar
 ## Documentation
 
 [View the full docs here](https://starsystem.starbem.app/docs/overview)
-
 
 ## Contributing
 
