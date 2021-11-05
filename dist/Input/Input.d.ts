@@ -1,0 +1,27 @@
+import React from 'react';
+import { TextInput, ViewStyle, StyleProp, TextStyle } from 'react-native';
+import { StarFunctionComponent } from '../helpers';
+import { IconNode } from '../Icon';
+import { ThemeProps } from '../config';
+export declare type InputProps = React.ComponentPropsWithRef<typeof TextInput> & {
+    containerStyle?: StyleProp<ViewStyle>;
+    disabled?: boolean;
+    disabledInputStyle?: StyleProp<TextStyle>;
+    inputContainerStyle?: StyleProp<ViewStyle>;
+    leftIcon?: IconNode;
+    leftIconContainerStyle?: StyleProp<ViewStyle>;
+    rightIcon?: IconNode;
+    rightIconContainerStyle?: StyleProp<ViewStyle>;
+    inputStyle?: StyleProp<TextStyle>;
+    InputComponent?: React.ComponentType | React.ForwardRefExoticComponent<any>;
+    errorProps?: object;
+    errorStyle?: StyleProp<TextStyle>;
+    errorMessage?: string;
+    label?: string | React.ReactNode;
+    labelColor?: 'primary' | 'primaryLight' | 'secondary' | 'secondaryLight' | 'white' | 'black' | 'grey0' | 'grey1' | 'grey2' | 'grey3' | 'grey4' | 'grey5' | 'success' | 'warning' | 'error';
+    labelStyle?: StyleProp<TextStyle>;
+    labelProps?: object;
+    renderErrorMessage?: boolean;
+    value?: string;
+};
+export declare const Input: StarFunctionComponent<InputProps & Partial<ThemeProps<InputProps>>>;

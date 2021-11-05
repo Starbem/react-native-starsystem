@@ -53,7 +53,6 @@ website/build
 package-lock.json
 build
 *.orig
-dist/
 .docgen/
 
 # fastlane
