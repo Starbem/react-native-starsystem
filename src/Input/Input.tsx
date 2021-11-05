@@ -123,7 +123,7 @@ export const Input: StarFunctionComponent<
         )}
 
         <View>
-          {props.value &&
+          {label &&
             renderText(
               label,
               {style: labelStyle, ...labelProps},
