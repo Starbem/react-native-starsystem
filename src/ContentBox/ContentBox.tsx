@@ -13,16 +13,18 @@ export type ContentBoxBaseProps = ViewProps & {
   topContent?: React.ReactElement;
   centerContent?: React.ReactElement;
   bottomContent?: React.ReactElement;
+  style?: Object;
 };
 
 export const ContentBoxBase: StarFunctionComponent<ContentBoxBaseProps> = ({
   topContent,
   centerContent,
   bottomContent,
+  style,
   ...animation
 }) => {
   return (
-    <AnimatedView style={styles.container} {...animation}>
+    <AnimatedView style={[styles.container, style]} {...animation}>
       <View style={styles.content}>{topContent}</View>
       <View style={styles.content}>{centerContent}</View>
       <View style={styles.content}>{bottomContent}</View>
