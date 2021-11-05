@@ -56,6 +56,7 @@ export type InputProps = React.ComponentPropsWithRef<typeof TextInput> & {
   labelStyle?: StyleProp<TextStyle>;
   labelProps?: object;
   renderErrorMessage?: boolean;
+  value?: string;
 };
 
 export const Input: StarFunctionComponent<
@@ -81,6 +82,7 @@ export const Input: StarFunctionComponent<
   theme,
   renderErrorMessage = true,
   style,
+  value,
   ...props
 }) => {
   const input = React.useRef<any>(null);
@@ -145,7 +147,7 @@ export const Input: StarFunctionComponent<
             underlineColorAndroid="transparent"
             editable={!disabled}
             ref={input}
-            onFo
+            value={value}
             style={StyleSheet.flatten([
               {
                 color: theme?.colors?.black,
