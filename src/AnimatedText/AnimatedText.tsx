@@ -12,6 +12,7 @@ export const AnimatedText: React.FC<AnimatedProps & TextProps> = ({
   direction,
   easing,
   useNativeDriver,
+  allowFontScaling = false,
   ...props
 }) => {
   return (

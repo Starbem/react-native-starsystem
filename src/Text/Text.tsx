@@ -52,6 +52,7 @@ export type TextProps = TextProperties & {
   h6Style?: StyleProp<TextStyle>;
   captionStyle?: StyleProp<TextStyle>;
   overlineStyle?: StyleProp<TextStyle>;
+  allowFontScaling?: boolean;
 };
 
 export const Text: StarFunctionComponent<TextProps> = ({
@@ -74,12 +75,14 @@ export const Text: StarFunctionComponent<TextProps> = ({
   captionStyle = {},
   overlineStyle = {},
   children = '',
+  allowFontScaling = false,
   theme,
   ...rest
 }) => {
   return (
     <NativeText
       accessibilityRole="text"
+      allowFontScaling={allowFontScaling}
       style={StyleSheet.flatten([
         {
           color: color ? colors[color] : theme?.colors?.black,

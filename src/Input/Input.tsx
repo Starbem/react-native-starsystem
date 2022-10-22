@@ -19,6 +19,7 @@ import {ThemeProps, colors} from '../config';
 const renderText = (content: any, defaultProps: any, style: StyleProp<any>) =>
   renderNode(Text, content, {
     ...defaultProps,
+    allowFontScaling: false,
     style: StyleSheet.flatten([style, defaultProps && defaultProps.style]),
   });
 
@@ -148,6 +149,7 @@ export const Input: StarFunctionComponent<
             editable={!disabled}
             ref={input}
             value={value}
+            allowFontScaling={false}
             style={StyleSheet.flatten([
               {
                 color: theme?.colors?.black,
@@ -177,6 +179,7 @@ export const Input: StarFunctionComponent<
 
       <Text
         {...errorProps}
+        allowFontScaling={false}
         style={StyleSheet.flatten([
           {
             margin: 5,
