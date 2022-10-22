@@ -13,7 +13,7 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 export const AnimatedText = (_a) => {
-    var { children, animation, duration, delay, direction, easing, useNativeDriver } = _a, props = __rest(_a, ["children", "animation", "duration", "delay", "direction", "easing", "useNativeDriver"]);
+    var { children, animation, duration, delay, direction, easing, useNativeDriver, allowFontScaling = false } = _a, props = __rest(_a, ["children", "animation", "duration", "delay", "direction", "easing", "useNativeDriver", "allowFontScaling"]);
     return (<Animatable.Text {...props} style={[styles.container, props.style]} animation={animation} duration={duration} delay={delay} direction={direction} easing={easing} useNativeDriver={useNativeDriver}>
       {children}
     </Animatable.Text>);

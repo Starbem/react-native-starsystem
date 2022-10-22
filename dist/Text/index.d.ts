@@ -21,6 +21,7 @@ declare const _default: import("react").FunctionComponent<Pick<import("react-nat
     h6Style?: import("react-native").StyleProp<import("react-native").TextStyle>;
     captionStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
     overlineStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+    allowFontScaling?: boolean;
 } & Partial<import("../config").ThemeProps<TextProps>>, "style" | "onLayout" | "testID" | "nativeID" | "accessible" | "accessibilityActions" | "accessibilityLabel" | "accessibilityRole" | "accessibilityState" | "accessibilityHint" | "accessibilityValue" | "onAccessibilityAction" | "accessibilityLiveRegion" | "importantForAccessibility" | "accessibilityElementsHidden" | "accessibilityViewIsModal" | "onAccessibilityEscape" | "onAccessibilityTap" | "onMagicTap" | "accessibilityIgnoresInvertColors" | "caption" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "allowFontScaling" | "ellipsizeMode" | "lineBreakMode" | "numberOfLines" | "onTextLayout" | "onPress" | "onLongPress" | "maxFontSizeMultiplier" | "adjustsFontSizeToFit" | "minimumFontScale" | "suppressHighlighting" | "selectable" | "selectionColor" | "textBreakStrategy" | "dataDetectorType" | "android_hyphenationFrequency" | "color" | "overline" | "h1Style" | "h2Style" | "h3Style" | "h4Style" | "h5Style" | "h6Style" | "captionStyle" | "overlineStyle">> | import("react").ForwardRefExoticComponent<import("react-native").TextProps & {
     color?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
     style?: import("react-native").StyleProp<import("react-native").TextStyle>;
@@ -40,5 +41,6 @@ declare const _default: import("react").FunctionComponent<Pick<import("react-nat
     h6Style?: import("react-native").StyleProp<import("react-native").TextStyle>;
     captionStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
     overlineStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+    allowFontScaling?: boolean;
 } & Partial<import("../config").ThemeProps<TextProps>>>;
 export default _default;

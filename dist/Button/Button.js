@@ -119,7 +119,7 @@ export const Button = (_a) => {
 
           {!loading &&
         !!title &&
-        renderNode(Text, title, Object.assign({ style: titleStyle }, titleProps))}
+        renderNode(Text, title, Object.assign(Object.assign({ style: titleStyle }, titleProps), { allowFontScaling: false }))}
         </ViewComponent>
       </TouchableComponentInternal>
     </View>);

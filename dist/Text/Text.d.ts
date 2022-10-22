@@ -27,5 +27,6 @@ export declare type TextProps = TextProperties & {
     h6Style?: StyleProp<TextStyle>;
     captionStyle?: StyleProp<TextStyle>;
     overlineStyle?: StyleProp<TextStyle>;
+    allowFontScaling?: boolean;
 };
 export declare const Text: StarFunctionComponent<TextProps>;

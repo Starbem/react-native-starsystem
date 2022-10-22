@@ -15,7 +15,7 @@ import { renderNode, patchWebProps } from '../helpers';
 import { fonts } from '../config';
 import Icon from '../Icon';
 import { colors } from '../config';
-const renderText = (content, defaultProps, style) => renderNode(Text, content, Object.assign(Object.assign({}, defaultProps), { style: StyleSheet.flatten([style, defaultProps && defaultProps.style]) }));
+const renderText = (content, defaultProps, style) => renderNode(Text, content, Object.assign(Object.assign({}, defaultProps), { allowFontScaling: false, style: StyleSheet.flatten([style, defaultProps && defaultProps.style]) }));
 export const Input = (_a) => {
     var _b, _c, _d, _e;
     var { containerStyle, disabled, disabledInputStyle, inputContainerStyle, leftIcon, leftIconContainerStyle, rightIcon, rightIconContainerStyle = {}, InputComponent = TextInput, inputStyle = {}, errorProps = {}, errorStyle = {}, errorMessage, label, labelColor, labelStyle, labelProps, theme, renderErrorMessage = true, style, value } = _a, props = __rest(_a, ["containerStyle", "disabled", "disabledInputStyle", "inputContainerStyle", "leftIcon", "leftIconContainerStyle", "rightIcon", "rightIconContainerStyle", "InputComponent", "inputStyle", "errorProps", "errorStyle", "errorMessage", "label", "labelColor", "labelStyle", "labelProps", "theme", "renderErrorMessage", "style", "value"]);
@@ -54,7 +54,7 @@ export const Input = (_a) => {
                 fontWeight: 'bold',
             },
         })))}
-          <InputComponent testID="STAR__Input__text-input" underlineColorAndroid="transparent" editable={!disabled} ref={input} value={value} style={StyleSheet.flatten([
+          <InputComponent testID="STAR__Input__text-input" underlineColorAndroid="transparent" editable={!disabled} ref={input} value={value} allowFontScaling={false} style={StyleSheet.flatten([
         {
             color: (_c = theme === null || theme === void 0 ? void 0 : theme.colors) === null || _c === void 0 ? void 0 : _c.black,
             fontSize: 14,
@@ -75,7 +75,7 @@ export const Input = (_a) => {
           </View>)}
       </Animated.View>
 
-      <Text {...errorProps} style={StyleSheet.flatten([
+      <Text {...errorProps} allowFontScaling={false} style={StyleSheet.flatten([
         {
             margin: 5,
             fontSize: 12,

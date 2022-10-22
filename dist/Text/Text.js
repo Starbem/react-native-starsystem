@@ -16,8 +16,8 @@ import { patchWebProps } from '../helpers';
 import normalize from '../helpers/normalizeText';
 export const Text = (_a) => {
     var _b;
-    var { color = 'black', style = {}, h1 = false, h2 = false, h3 = false, h4 = false, h5 = false, h6 = false, caption = false, overline = false, h1Style = {}, h2Style = {}, h3Style = {}, h4Style = {}, h5Style = {}, h6Style = {}, captionStyle = {}, overlineStyle = {}, children = '', theme } = _a, rest = __rest(_a, ["color", "style", "h1", "h2", "h3", "h4", "h5", "h6", "caption", "overline", "h1Style", "h2Style", "h3Style", "h4Style", "h5Style", "h6Style", "captionStyle", "overlineStyle", "children", "theme"]);
-    return (<NativeText accessibilityRole="text" style={StyleSheet.flatten([
+    var { color = 'black', style = {}, h1 = false, h2 = false, h3 = false, h4 = false, h5 = false, h6 = false, caption = false, overline = false, h1Style = {}, h2Style = {}, h3Style = {}, h4Style = {}, h5Style = {}, h6Style = {}, captionStyle = {}, overlineStyle = {}, children = '', allowFontScaling = false, theme } = _a, rest = __rest(_a, ["color", "style", "h1", "h2", "h3", "h4", "h5", "h6", "caption", "overline", "h1Style", "h2Style", "h3Style", "h4Style", "h5Style", "h6Style", "captionStyle", "overlineStyle", "children", "allowFontScaling", "theme"]);
+    return (<NativeText accessibilityRole="text" allowFontScaling={allowFontScaling} style={StyleSheet.flatten([
         {
             color: color ? colors[color] : (_b = theme === null || theme === void 0 ? void 0 : theme.colors) === null || _b === void 0 ? void 0 : _b.black,
         },
