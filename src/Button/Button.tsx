@@ -297,6 +297,7 @@ export const Button: StarFunctionComponent<ButtonProps> = ({
             renderNode(Text, title, {
               style: titleStyle,
               ...titleProps,
+              allowFontScaling: false,
             })}
         </ViewComponent>
       </TouchableComponentInternal>
