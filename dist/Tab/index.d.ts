@@ -1,0 +1,196 @@
+/// <reference types="react" />
+import { StarFunctionComponent } from '../helpers';
+import { TabBaseProps } from './Tab';
+import { TabItemProps } from './Tab.Item';
+declare const ThemedTabItem: import("react").FunctionComponent<Pick<import("react-native").TouchableOpacityProps & import("react-native").TouchableNativeFeedbackProps & {
+    title?: string | import("react").ReactElement<{}, string | ((props: any) => import("react").ReactElement<any, any>) | (new (props: any) => import("react").Component<any, any, any>)>;
+    titleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+    titleProps?: import("..").TextProps;
+    buttonStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    type?: "solid" | "clear" | "outline";
+    loading?: boolean;
+    loadingStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    loadingProps?: import("react-native").ActivityIndicatorProps;
+    containerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    icon?: import("../Icon").IconNode;
+    iconContainerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    iconRight?: boolean;
+    linearGradientProps?: object;
+    TouchableComponent?: typeof import("react").Component;
+    ViewComponent?: typeof import("react").Component;
+    disabled?: boolean;
+    disabledStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    disabledTitleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+    raised?: boolean;
+    iconPosition?: "left" | "right" | "bottom" | "top";
+    variant?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+    textColor?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+} & {
+    childs?: number;
+    active?: boolean;
+    activeColor?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+    titleColor?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+} & Partial<import("../config").ThemeProps<TabItemProps>>, "style" | "onLayout" | "testID" | "accessible" | "accessibilityActions" | "accessibilityLabel" | "accessibilityRole" | "accessibilityState" | "accessibilityHint" | "accessibilityValue" | "onAccessibilityAction" | "accessibilityLiveRegion" | "importantForAccessibility" | "accessibilityElementsHidden" | "accessibilityViewIsModal" | "onAccessibilityEscape" | "onAccessibilityTap" | "onMagicTap" | "accessibilityIgnoresInvertColors" | "title" | "onPress" | "onLongPress" | "hitSlop" | "hasTVPreferredFocus" | "tvParallaxProperties" | "type" | "raised" | "containerStyle" | "disabled" | "disabledStyle" | "background" | "useForeground" | "delayLongPress" | "delayPressIn" | "delayPressOut" | "onBlur" | "onFocus" | "onPressIn" | "onPressOut" | "pressRetentionOffset" | "touchSoundDisabled" | "activeOpacity" | "icon" | "titleStyle" | "TouchableComponent" | "buttonStyle" | "loading" | "loadingStyle" | "loadingProps" | "titleProps" | "iconContainerStyle" | "iconRight" | "disabledTitleStyle" | "linearGradientProps" | "ViewComponent" | "iconPosition" | "variant" | "textColor" | "childs" | "active" | "activeColor" | "titleColor">> | import("react").ForwardRefExoticComponent<import("react-native").TouchableOpacityProps & import("react-native").TouchableNativeFeedbackProps & {
+    title?: string | import("react").ReactElement<{}, string | ((props: any) => import("react").ReactElement<any, any>) | (new (props: any) => import("react").Component<any, any, any>)>;
+    titleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+    titleProps?: import("..").TextProps;
+    buttonStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    type?: "solid" | "clear" | "outline";
+    loading?: boolean;
+    loadingStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    loadingProps?: import("react-native").ActivityIndicatorProps;
+    containerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    icon?: import("../Icon").IconNode;
+    iconContainerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    iconRight?: boolean;
+    linearGradientProps?: object;
+    TouchableComponent?: typeof import("react").Component;
+    ViewComponent?: typeof import("react").Component;
+    disabled?: boolean;
+    disabledStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    disabledTitleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+    raised?: boolean;
+    iconPosition?: "left" | "right" | "bottom" | "top";
+    variant?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+    textColor?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+} & {
+    childs?: number;
+    active?: boolean;
+    activeColor?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+    titleColor?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+} & Partial<import("../config").ThemeProps<TabItemProps>>>;
+export declare type TabProps = StarFunctionComponent<TabBaseProps> & {
+    Item: typeof ThemedTabItem;
+};
+export declare const Tab: TabProps;
+export type { TabBaseProps, TabItemProps };
+export declare const ThemedTab: (import("react").FunctionComponent<Pick<import("react-native").ViewProps & {
+    value?: number;
+    onChange?: (value: number) => void;
+    disableIndicator?: boolean;
+    indicatorStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    variant?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+} & Partial<import("../config").ThemeProps<TabBaseProps>>, "style" | "onLayout" | "testID" | "nativeID" | "accessible" | "accessibilityActions" | "accessibilityLabel" | "accessibilityRole" | "accessibilityState" | "accessibilityHint" | "accessibilityValue" | "onAccessibilityAction" | "accessibilityLiveRegion" | "importantForAccessibility" | "accessibilityElementsHidden" | "accessibilityViewIsModal" | "onAccessibilityEscape" | "onAccessibilityTap" | "onMagicTap" | "accessibilityIgnoresInvertColors" | "hitSlop" | "pointerEvents" | "removeClippedSubviews" | "collapsable" | "needsOffscreenAlphaCompositing" | "renderToHardwareTextureAndroid" | "focusable" | "shouldRasterizeIOS" | "isTVSelectable" | "hasTVPreferredFocus" | "tvParallaxProperties" | "tvParallaxShiftDistanceX" | "tvParallaxShiftDistanceY" | "tvParallaxTiltAngle" | "tvParallaxMagnification" | "onStartShouldSetResponder" | "onMoveShouldSetResponder" | "onResponderEnd" | "onResponderGrant" | "onResponderReject" | "onResponderMove" | "onResponderRelease" | "onResponderStart" | "onResponderTerminationRequest" | "onResponderTerminate" | "onStartShouldSetResponderCapture" | "onMoveShouldSetResponderCapture" | "onTouchStart" | "onTouchMove" | "onTouchEnd" | "onTouchCancel" | "onTouchEndCapture" | "value" | "indicatorStyle" | "variant" | "onChange" | "disableIndicator">> & {
+    Item: import("react").FunctionComponent<Pick<import("react-native").TouchableOpacityProps & import("react-native").TouchableNativeFeedbackProps & {
+        title?: string | import("react").ReactElement<{}, string | ((props: any) => import("react").ReactElement<any, any>) | (new (props: any) => import("react").Component<any, any, any>)>;
+        titleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+        titleProps?: import("..").TextProps;
+        buttonStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        type?: "solid" | "clear" | "outline";
+        loading?: boolean;
+        loadingStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        loadingProps?: import("react-native").ActivityIndicatorProps;
+        containerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        icon?: import("../Icon").IconNode;
+        iconContainerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        iconRight?: boolean;
+        linearGradientProps?: object;
+        TouchableComponent?: typeof import("react").Component;
+        ViewComponent?: typeof import("react").Component;
+        disabled?: boolean;
+        disabledStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        disabledTitleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+        raised?: boolean;
+        iconPosition?: "left" | "right" | "bottom" | "top";
+        variant?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+        textColor?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+    } & {
+        childs?: number;
+        active?: boolean;
+        activeColor?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+        titleColor?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+    } & Partial<import("../config").ThemeProps<TabItemProps>>, "style" | "onLayout" | "testID" | "accessible" | "accessibilityActions" | "accessibilityLabel" | "accessibilityRole" | "accessibilityState" | "accessibilityHint" | "accessibilityValue" | "onAccessibilityAction" | "accessibilityLiveRegion" | "importantForAccessibility" | "accessibilityElementsHidden" | "accessibilityViewIsModal" | "onAccessibilityEscape" | "onAccessibilityTap" | "onMagicTap" | "accessibilityIgnoresInvertColors" | "title" | "onPress" | "onLongPress" | "hitSlop" | "hasTVPreferredFocus" | "tvParallaxProperties" | "type" | "raised" | "containerStyle" | "disabled" | "disabledStyle" | "background" | "useForeground" | "delayLongPress" | "delayPressIn" | "delayPressOut" | "onBlur" | "onFocus" | "onPressIn" | "onPressOut" | "pressRetentionOffset" | "touchSoundDisabled" | "activeOpacity" | "icon" | "titleStyle" | "TouchableComponent" | "buttonStyle" | "loading" | "loadingStyle" | "loadingProps" | "titleProps" | "iconContainerStyle" | "iconRight" | "disabledTitleStyle" | "linearGradientProps" | "ViewComponent" | "iconPosition" | "variant" | "textColor" | "childs" | "active" | "activeColor" | "titleColor">> | import("react").ForwardRefExoticComponent<import("react-native").TouchableOpacityProps & import("react-native").TouchableNativeFeedbackProps & {
+        title?: string | import("react").ReactElement<{}, string | ((props: any) => import("react").ReactElement<any, any>) | (new (props: any) => import("react").Component<any, any, any>)>;
+        titleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+        titleProps?: import("..").TextProps;
+        buttonStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        type?: "solid" | "clear" | "outline";
+        loading?: boolean;
+        loadingStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        loadingProps?: import("react-native").ActivityIndicatorProps;
+        containerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        icon?: import("../Icon").IconNode;
+        iconContainerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        iconRight?: boolean;
+        linearGradientProps?: object;
+        TouchableComponent?: typeof import("react").Component;
+        ViewComponent?: typeof import("react").Component;
+        disabled?: boolean;
+        disabledStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        disabledTitleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+        raised?: boolean;
+        iconPosition?: "left" | "right" | "bottom" | "top";
+        variant?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+        textColor?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+    } & {
+        childs?: number;
+        active?: boolean;
+        activeColor?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+        titleColor?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+    } & Partial<import("../config").ThemeProps<TabItemProps>>>;
+}) | (import("react").ForwardRefExoticComponent<import("react-native").ViewProps & {
+    value?: number;
+    onChange?: (value: number) => void;
+    disableIndicator?: boolean;
+    indicatorStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    variant?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+} & Partial<import("../config").ThemeProps<TabBaseProps>>> & {
+    Item: import("react").FunctionComponent<Pick<import("react-native").TouchableOpacityProps & import("react-native").TouchableNativeFeedbackProps & {
+        title?: string | import("react").ReactElement<{}, string | ((props: any) => import("react").ReactElement<any, any>) | (new (props: any) => import("react").Component<any, any, any>)>;
+        titleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+        titleProps?: import("..").TextProps;
+        buttonStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        type?: "solid" | "clear" | "outline";
+        loading?: boolean;
+        loadingStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        loadingProps?: import("react-native").ActivityIndicatorProps;
+        containerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        icon?: import("../Icon").IconNode;
+        iconContainerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        iconRight?: boolean;
+        linearGradientProps?: object;
+        TouchableComponent?: typeof import("react").Component;
+        ViewComponent?: typeof import("react").Component;
+        disabled?: boolean;
+        disabledStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        disabledTitleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+        raised?: boolean;
+        iconPosition?: "left" | "right" | "bottom" | "top";
+        variant?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+        textColor?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+    } & {
+        childs?: number;
+        active?: boolean;
+        activeColor?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+        titleColor?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+    } & Partial<import("../config").ThemeProps<TabItemProps>>, "style" | "onLayout" | "testID" | "accessible" | "accessibilityActions" | "accessibilityLabel" | "accessibilityRole" | "accessibilityState" | "accessibilityHint" | "accessibilityValue" | "onAccessibilityAction" | "accessibilityLiveRegion" | "importantForAccessibility" | "accessibilityElementsHidden" | "accessibilityViewIsModal" | "onAccessibilityEscape" | "onAccessibilityTap" | "onMagicTap" | "accessibilityIgnoresInvertColors" | "title" | "onPress" | "onLongPress" | "hitSlop" | "hasTVPreferredFocus" | "tvParallaxProperties" | "type" | "raised" | "containerStyle" | "disabled" | "disabledStyle" | "background" | "useForeground" | "delayLongPress" | "delayPressIn" | "delayPressOut" | "onBlur" | "onFocus" | "onPressIn" | "onPressOut" | "pressRetentionOffset" | "touchSoundDisabled" | "activeOpacity" | "icon" | "titleStyle" | "TouchableComponent" | "buttonStyle" | "loading" | "loadingStyle" | "loadingProps" | "titleProps" | "iconContainerStyle" | "iconRight" | "disabledTitleStyle" | "linearGradientProps" | "ViewComponent" | "iconPosition" | "variant" | "textColor" | "childs" | "active" | "activeColor" | "titleColor">> | import("react").ForwardRefExoticComponent<import("react-native").TouchableOpacityProps & import("react-native").TouchableNativeFeedbackProps & {
+        title?: string | import("react").ReactElement<{}, string | ((props: any) => import("react").ReactElement<any, any>) | (new (props: any) => import("react").Component<any, any, any>)>;
+        titleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+        titleProps?: import("..").TextProps;
+        buttonStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        type?: "solid" | "clear" | "outline";
+        loading?: boolean;
+        loadingStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        loadingProps?: import("react-native").ActivityIndicatorProps;
+        containerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        icon?: import("../Icon").IconNode;
+        iconContainerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        iconRight?: boolean;
+        linearGradientProps?: object;
+        TouchableComponent?: typeof import("react").Component;
+        ViewComponent?: typeof import("react").Component;
+        disabled?: boolean;
+        disabledStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        disabledTitleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+        raised?: boolean;
+        iconPosition?: "left" | "right" | "bottom" | "top";
+        variant?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+        textColor?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+    } & {
+        childs?: number;
+        active?: boolean;
+        activeColor?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+        titleColor?: "primary" | "primaryLight" | "secondary" | "secondaryLight" | "white" | "black" | "grey0" | "grey1" | "grey2" | "grey3" | "grey4" | "grey5" | "success" | "warning" | "error";
+    } & Partial<import("../config").ThemeProps<TabItemProps>>>;
+});
+export default ThemedTab;
