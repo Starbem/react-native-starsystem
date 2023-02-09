@@ -1,6 +1,6 @@
 import React from 'react'
 import { ScrollView, StyleSheet } from 'react-native'
-import { Button } from '@app/src'
+import { Button } from '../../../src'
 
 const Buttons = () => {
 	return (

@@ -5,8 +5,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 const Stack = createNativeStackNavigator()
 
 // Pages
-import Initial from '@app/example/pages/Initial'
-import Buttons from '@app/example/pages/Buttons'
+import Initial from '../pages/Initial'
+import Buttons from '../pages/Buttons'
 
 const Routes = () => {
 	return (

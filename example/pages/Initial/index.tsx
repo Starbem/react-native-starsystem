@@ -1,7 +1,7 @@
 import React from 'react'
 import { ScrollView, StyleSheet } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-import { Button } from '@app/src'
+import { Button } from '../../../src'
 
 const Initial = () => {
 	const { navigate } = useNavigation()
