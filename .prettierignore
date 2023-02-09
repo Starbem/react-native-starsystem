@@ -1,0 +1,7 @@
+# Ignore artifacts:
+build
+coverage
+.jso
+ios
+android
+src

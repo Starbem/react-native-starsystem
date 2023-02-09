@@ -1,0 +1,56 @@
+{
+	"env": {
+		"es2021": true,
+		"react-native/react-native": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"prettier",
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"sourceType": "module"
+	},
+	"plugins": [
+		"react",
+		"@typescript-eslint",
+		"prettier",
+		"react-native"
+	],
+	"rules": {
+		"no-implicit-any": "off",
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [".js", ".jsx", ".ts", ".tsx"]
+			}
+		],
+		"no-unused-vars": [
+			"error",
+			{ "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+		],
+		"prettier/prettier": [
+			"error",
+			{
+				"endOfLine": "auto",
+				"semi": false,
+				"useTabs": true,
+				"singleQuote": true
+			}
+		],
+		"@typescript-eslint/explicit-module-boundary-types": "off",
+		"import/prefer-default-export": "off",
+		"@typescript-eslint/no-namespace": "off",
+		"@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-extra-semi": "off",
+		"react/prop-types": "off",
+		"react/no-unescaped-entities": 0,
+		"react/display-name": 0
+	}
+}

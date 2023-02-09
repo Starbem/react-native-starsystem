@@ -1,73 +1,74 @@
-import {AvatarProps, AccessoryProps} from '../Avatar';
-import {BadgeProps} from '../Badge';
-import {BottomSheetProps} from '../BottomSheet';
-import {ButtonProps} from '../Button';
-import {CardProps} from '../Card';
-import {CheckBoxProps} from '../CheckBox';
-import {ContentBoxProps} from '../ContentBox';
-import {DividerProps} from '../Divider';
-import {HeaderProps} from '../Header';
-import {IconProps} from '../Icon';
-import {ImageProps} from '../Image';
-import {InputProps} from '../Input';
-import {LinearProgressProps} from '../LinearProgress';
-import {ListItemProps, ListItemAccordionProps} from '../ListItem';
-import {SwitchProps} from '../Switch';
-import {TabItemProps, TabProps} from '../Tab';
-import {TabViewProps} from '../TabView';
-import {TextProps} from '../Text';
-import {ViewProps} from 'react-native';
+import { AvatarProps, AccessoryProps } from '../components/Avatar'
+import { BadgeProps } from '../components/Badge'
+import { BottomSheetProps } from '../components/BottomSheet'
+import { ButtonProps } from '../components/Button'
+import { CardProps } from '../components/Card'
+import { CheckBoxProps } from '../components/CheckBox'
+import { ContentBoxProps } from '../components/ContentBox'
+import { DividerProps } from '../components/Divider'
+import { HeaderProps } from '../components/Header'
+import { IconProps } from '../components/Icon'
+import { ImageProps } from '../components/Image'
+import { InputProps } from '../components/Input'
+import { LinearProgressProps } from '../components/LinearProgress'
+import { ListItemProps, ListItemAccordionProps } from '../components/ListItem'
+import { SwitchProps } from '../components/Switch'
+import { TabItemProps, TabProps } from '../components/Tab'
+import { TabViewProps } from '../components/TabView'
+import { TextProps } from '../components/Text'
+import { ViewProps } from 'react-native'
 
-import colors, {Colors} from './colors';
-import fonts, {Fonts} from './fonts';
+import colors, { Colors } from './colors'
+import fonts, { Fonts } from './fonts'
 
 export default {
-  colors,
-  fonts,
-};
-
-type RecursivePartial<T> = {[P in keyof T]?: RecursivePartial<T[P]>};
-
-export interface FullTheme {
-  Avatar: Partial<AvatarProps>;
-  AvatarAccessory: Partial<AccessoryProps>;
-  Badge: Partial<BadgeProps>;
-  BottomSheet: Partial<BottomSheetProps>;
-  Button: Partial<ButtonProps>;
-  Card: Partial<CardProps>;
-  CardDivider: Partial<DividerProps>;
-  CardFeaturedSubtitle: Partial<TextProps>;
-  CardFeaturedTitle: Partial<TextProps>;
-  CardImage: Partial<ImageProps>;
-  CardTitle: Partial<TextProps>;
-  CheckBox: Partial<CheckBoxProps>;
-  ContentBox: Partial<ContentBoxProps>;
-  Divider: Partial<DividerProps>;
-  Header: Partial<HeaderProps>;
-  Icon: Partial<IconProps>;
-  Image: Partial<ImageProps>;
-  Input: Partial<InputProps>;
-  LinearProgress: Partial<LinearProgressProps>;
-  ListItem: Partial<ListItemProps>;
-  ListItemAccordion: Partial<ListItemAccordionProps>;
-  ListItemCheckBox: Partial<CheckBoxProps>;
-  ListItemChevron: Partial<IconProps>;
-  ListItemContent: Partial<ViewProps>;
-  ListItemInput: Partial<InputProps>;
-  ListItemSubtitle: Partial<TextProps>;
-  ListItemTitle: Partial<TextProps>;
-  Switch: Partial<SwitchProps>;
-  Tab: Partial<TabProps>;
-  TabItem: Partial<TabItemProps>;
-  TabView: Partial<TabViewProps>;
-  TabViewItem: Partial<ViewProps>;
-  Text: Partial<TextProps>;
-  colors: RecursivePartial<Colors>;
-  fonts: RecursivePartial<Fonts>;
+	colors,
+	fonts,
 }
 
-export type Theme<T = {}> = Partial<FullTheme> & T;
+type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> }
 
-export type UpdateTheme = (updates: RecursivePartial<FullTheme>) => void;
+export interface FullTheme {
+	Avatar: Partial<AvatarProps>
+	AvatarAccessory: Partial<AccessoryProps>
+	Badge: Partial<BadgeProps>
+	BottomSheet: Partial<BottomSheetProps>
+	Button: Partial<ButtonProps>
+	Card: Partial<CardProps>
+	CardDivider: Partial<DividerProps>
+	CardFeaturedSubtitle: Partial<TextProps>
+	CardFeaturedTitle: Partial<TextProps>
+	CardImage: Partial<ImageProps>
+	CardTitle: Partial<TextProps>
+	CheckBox: Partial<CheckBoxProps>
+	ContentBox: Partial<ContentBoxProps>
+	Divider: Partial<DividerProps>
+	Header: Partial<HeaderProps>
+	Icon: Partial<IconProps>
+	Image: Partial<ImageProps>
+	Input: Partial<InputProps>
+	LinearProgress: Partial<LinearProgressProps>
+	ListItem: Partial<ListItemProps>
+	ListItemAccordion: Partial<ListItemAccordionProps>
+	ListItemCheckBox: Partial<CheckBoxProps>
+	ListItemChevron: Partial<IconProps>
+	ListItemContent: Partial<ViewProps>
+	ListItemInput: Partial<InputProps>
+	ListItemSubtitle: Partial<TextProps>
+	ListItemTitle: Partial<TextProps>
+	Switch: Partial<SwitchProps>
+	Tab: Partial<TabProps>
+	TabItem: Partial<TabItemProps>
+	TabView: Partial<TabViewProps>
+	TabViewItem: Partial<ViewProps>
+	Text: Partial<TextProps>
+	colors: RecursivePartial<Colors>
+	fonts: RecursivePartial<Fonts>
+}
 
-export type ReplaceTheme = (updates: RecursivePartial<FullTheme>) => void;
+// eslint-disable-next-line @typescript-eslint/ban-types
+export type Theme<T = {}> = Partial<FullTheme> & T
+
+export type UpdateTheme = (updates: RecursivePartial<FullTheme>) => void
+
+export type ReplaceTheme = (updates: RecursivePartial<FullTheme>) => void

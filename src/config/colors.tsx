@@ -1,102 +1,51 @@
-import {StyleSheet} from 'react-native';
-
-interface PlatformColors {
-  primary: string;
-  secondary: string;
-  grey: string;
-  searchBg: string;
-  success: string;
-  error: string;
-  warning: string;
-}
+import { StyleSheet } from 'react-native'
 
 export interface Colors {
-  readonly primary: string;
-  readonly primaryLight: string;
-  readonly secondary: string;
-  readonly secondaryLight: string;
-  readonly white: string;
-  readonly black: string;
-  readonly grey0: string;
-  readonly grey1: string;
-  readonly grey2: string;
-  readonly grey3: string;
-  readonly grey4: string;
-  readonly grey5: string;
-  readonly greyOutline: string;
-  readonly searchBg: string;
-  readonly success: string;
-  readonly warning: string;
-  readonly error: string;
-  readonly disabled: string;
-  readonly divider: string;
-  readonly platform: {
-    ios: PlatformColors;
-    android: PlatformColors;
-    web: PlatformColors;
-    default: PlatformColors;
-  };
+	readonly interface: string
+	readonly primary: string
+	readonly primary1: string
+	readonly primary2: string
+	readonly primary3: string
+	readonly secondary: string
+	readonly secondary1: string
+	readonly secondary2: string
+	readonly secondary3: string
+	readonly title: string
+	readonly text: string
+	readonly white: string
+	readonly black: string
+	readonly gray0: string
+	readonly gray1: string
+	readonly gray2: string
+	readonly success: string
+	readonly warning: string
+	readonly error: string
+	readonly disabled: string
+	readonly divider: string
 }
 
 const colors: Colors = {
-  primary: '#FF6B19',
-  primaryLight: '#FF9B00',
-  secondary: '#FF3F72',
-  secondaryLight: '#FFE4EB',
-  white: '#ffffff',
-  black: '#2C2B43',
-  grey0: '#525166',
-  grey1: '#787887',
-  grey2: '#C5C9D5',
-  grey3: '#D9DCE6',
-  grey4: '#F0F2F8',
-  grey5: '#e1e8ee',
-  greyOutline: '#bbb',
-  searchBg: '#303337',
-  success: '#1FBA5D',
-  error: '#FF4242',
-  warning: '#F89F4D',
-  disabled: 'hsl(208, 8%, 90%)',
-  // Darker color if hairlineWidth is not thin enough
-  divider: StyleSheet.hairlineWidth < 1 ? '#bcbbc1' : 'rgba(0, 0, 0, 0.12)',
-  platform: {
-    ios: {
-      primary: '#007aff',
-      secondary: '#5856d6',
-      grey: '#7d7d7d',
-      searchBg: '#dcdce1',
-      success: '#4cd964',
-      error: '#ff3b30',
-      warning: '#ffcc00',
-    },
-    android: {
-      primary: '#2196f3',
-      secondary: '#9C27B0',
-      grey: 'rgba(0, 0, 0, 0.54)',
-      searchBg: '#dcdce1',
-      success: '#4caf50',
-      error: '#f44336',
-      warning: '#ffeb3b',
-    },
-    web: {
-      primary: '#2089dc',
-      secondary: '#ca71eb',
-      grey: '#393e42',
-      searchBg: '#303337',
-      success: '#52c41a',
-      error: '#ff190c',
-      warning: '#faad14',
-    },
-    default: {
-      primary: '#007aff',
-      secondary: '#5856d6',
-      grey: '#7d7d7d',
-      searchBg: '#dcdce1',
-      success: '#4cd964',
-      error: '#ff3b30',
-      warning: '#ffcc00',
-    },
-  },
-};
+	interface: '#F0F2F8',
+	primary: '#0C1F36',
+	primary1: '#005E6E',
+	primary2: '#007786',
+	primary3: '#1C7A9D',
+	secondary: '#FF6B19',
+	secondary1: '#E87B19',
+	secondary2: '#FF9B19',
+	secondary3: '#FFB919',
+	title: '#000000',
+	text: '#222222',
+	white: '#FFFFFF',
+	black: '#000000',
+	gray0: '#5B6572',
+	gray1: '#959EAA',
+	gray2: '#D9DCE1',
+	success: '#1FBA5D',
+	error: '#FF4242',
+	warning: '#F89F4D',
+	disabled: 'hsl(208, 8%, 90%)',
+	divider: StyleSheet.hairlineWidth < 1 ? '#bcbbc1' : 'rgba(0, 0, 0, 0.12)',
+}
 
-export default colors;
+export default colors

@@ -1,7 +1,7 @@
-import {moderateScale} from 'react-native-size-matters';
+import { moderateScale } from 'react-native-size-matters'
 
 function normalize(number: number, factor = 0.25) {
-  return moderateScale(number, factor);
+	return moderateScale(number, factor)
 }
 
-export default normalize;
+export default normalize

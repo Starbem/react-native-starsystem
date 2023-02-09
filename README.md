@@ -25,9 +25,8 @@ to install React Native Star System!
 Start using the components or try it on Snack
 
 ```js
-import {Button} from 'react-native-starsystem';
-
-<Button />;
+import { Button } from 'react-native-starsystem'
+;<Button />
 ```
 
 ## Components included:
