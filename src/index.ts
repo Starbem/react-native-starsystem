@@ -1,4 +1,7 @@
-import AnimatedView, { AnimatedProps } from './components/AnimatedView'
+import AnimatedView, {
+	AnimatedProps,
+	Animations,
+} from './components/AnimatedView'
 import AnimatedImage from './components/AnimatedImage'
 import AnimatedText from './components/AnimatedText'
 import Avatar, { AvatarProps } from './components/Avatar'
@@ -98,6 +101,7 @@ export { getBottomSpace, getStatusBarHeight, isIphoneX, ifIphoneX }
 // Components Props exports
 export type {
 	AnimatedProps,
+	Animations,
 	AvatarProps,
 	BadgeProps,
 	BottomSheetProps,

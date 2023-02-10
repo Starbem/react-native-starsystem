@@ -7,6 +7,9 @@ const Stack = createNativeStackNavigator()
 // Pages
 import Initial from '../pages/Initial'
 import Buttons from '../pages/Buttons'
+import AnimatedImages from '../pages/AnimatedImages'
+import AnimatedTexts from '../pages/AnimatedTexts'
+import AnimatedViews from '../pages/AnimatedViews'
 
 const Routes = () => {
 	return (
@@ -18,6 +21,9 @@ const Routes = () => {
 					options={{ headerTitle: 'StarSystem Components' }}
 				/>
 				<Stack.Screen name="Buttons" component={Buttons} />
+				<Stack.Screen name="AnimatedImages" component={AnimatedImages} />
+				<Stack.Screen name="AnimatedTexts" component={AnimatedTexts} />
+				<Stack.Screen name="AnimatedViews" component={AnimatedViews} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	)
