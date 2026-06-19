@@ -5,10 +5,13 @@ import Avatar, {AvatarProps} from './Avatar';
 import Badge, {BadgeProps, withBadge} from './Badge';
 import BottomSheet, {BottomSheetProps} from './BottomSheet';
 import Button, {ButtonProps} from './Button';
+import ButtonGroup, {ButtonGroupProps} from './ButtonGroup';
+import ButtonLiquidGlass, {ButtonLiquidGlassProps} from './ButtonLiquidGlass';
 import Card, {CardProps} from './Card';
 import CheckBox, {CheckBoxProps} from './CheckBox';
 import ContentBox, {ContentBoxProps} from './ContentBox';
 import Divider, {DividerProps} from './Divider';
+import Dropdown, {DropdownProps, DropdownItem} from './Dropdown';
 import Header, {HeaderProps} from './Header';
 import Icon, {IconProps} from './Icon';
 import Image, {ImageProps} from './Image';
@@ -19,6 +22,8 @@ import ListItem, {
   ListItemAccordionProps,
   ListItemSwipeableProps,
 } from './ListItem';
+import ModalDatePicker, {ModalDatePickerProps, DateRange} from './ModalDatePicker';
+import SocialButton, {SocialButtonProps, SocialProvider} from './SocialButton';
 import Switch, {SwitchProps} from './Switch';
 import Tab, {TabItemProps, TabProps} from './Tab';
 import TabView, {TabViewProps} from './TabView';
@@ -58,16 +63,21 @@ export {
   Badge,
   BottomSheet,
   Button,
+  ButtonGroup,
+  ButtonLiquidGlass,
   Card,
   CheckBox,
   ContentBox,
   Divider,
+  Dropdown,
   Header,
   Icon,
   Image,
   Input,
   LinearProgress,
   ListItem,
+  ModalDatePicker,
+  SocialButton,
   Switch,
   Tab,
   TabView,
@@ -100,11 +110,16 @@ export type {
   BadgeProps,
   BottomSheetProps,
   ButtonProps,
+  ButtonGroupProps,
+  ButtonLiquidGlassProps,
   CardProps,
   CheckBoxProps,
   ContentBoxProps,
   Colors,
+  DateRange,
   DividerProps,
+  DropdownItem,
+  DropdownProps,
   HeaderProps,
   IconProps,
   ImageProps,
@@ -113,6 +128,9 @@ export type {
   ListItemAccordionProps,
   ListItemProps,
   ListItemSwipeableProps,
+  ModalDatePickerProps,
+  SocialButtonProps,
+  SocialProvider,
   SwitchProps,
   TabItemProps,
   TabProps,
