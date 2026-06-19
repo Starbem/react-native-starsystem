@@ -40,12 +40,14 @@ export const CardBase: StarFunctionComponent<CardBaseProps> = ({
           }),
         },
         containerStyle && containerStyle,
-      ])}>
+      ])}
+    >
       <View
         style={StyleSheet.flatten([
           styles.wrapper,
           wrapperStyle && wrapperStyle,
-        ])}>
+        ])}
+      >
         {children}
       </View>
     </View>

@@ -7,29 +7,30 @@ import {StarFunctionComponent} from '../helpers';
 
 export type CardFeaturedSubtitleProps = TextProps;
 
-export const CardFeaturedSubtitle: StarFunctionComponent<CardFeaturedSubtitleProps> =
-  ({theme, style, ...props}) => (
-    <Text
-      style={
-        StyleSheet.flatten([
-          {
-            fontSize: normalize(13),
-            marginBottom: 8,
-            color: theme?.colors?.white,
-            ...Platform.select({
-              android: {
-                ...fonts.android.black,
-              },
-              default: {
-                fontWeight: '400',
-              },
-            }),
-          },
-          style,
-        ]) as TextStyle
-      }
-      {...props}
-    />
-  );
+export const CardFeaturedSubtitle: StarFunctionComponent<
+  CardFeaturedSubtitleProps
+> = ({theme, style, ...props}) => (
+  <Text
+    style={
+      StyleSheet.flatten([
+        {
+          fontSize: normalize(13),
+          marginBottom: 8,
+          color: theme?.colors?.white,
+          ...Platform.select({
+            android: {
+              ...fonts.android.black,
+            },
+            default: {
+              fontWeight: '400',
+            },
+          }),
+        },
+        style,
+      ]) as TextStyle
+    }
+    {...props}
+  />
+);
 
 CardFeaturedSubtitle.displayName = 'Card.FeaturedSubtitle';

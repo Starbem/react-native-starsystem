@@ -1,9 +1,11 @@
 import React, {useRef} from 'react';
-import {View} from 'react-native';
+import {StyleProp, View, ViewStyle} from 'react-native';
 
 export type PadViewProps = {
   Component: React.ComponentClass;
   pad: number;
+  children?: React.ReactNode;
+  style?: StyleProp<ViewStyle>;
 };
 
 export const PadView: React.FC<PadViewProps> = ({

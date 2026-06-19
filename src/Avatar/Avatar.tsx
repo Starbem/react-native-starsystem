@@ -103,13 +103,14 @@ export const Avatar: StarFunctionComponent<AvatarProps> = ({
           styles.title,
           {fontSize: titleSize},
           titleStyle,
-        ])}>
+        ])}
+      >
         {title}
       </Text>
     )) ||
     (icon && (
       <Icon
-        style={StyleSheet.flatten([iconStyle && iconStyle])}
+        style={StyleSheet.flatten([iconStyle && iconStyle]) as any}
         color={icon.color || 'white'}
         name={icon.name || 'account'}
         size={icon.size || iconSize}
@@ -139,7 +140,8 @@ export const Avatar: StarFunctionComponent<AvatarProps> = ({
         rounded && {borderRadius: width / 2},
         containerStyle,
       ])}
-      {...attributes}>
+      {...attributes}
+    >
       <Image
         testID="STAR__Avatar__Image"
         placeholderStyle={StyleSheet.flatten([
@@ -147,7 +149,7 @@ export const Avatar: StarFunctionComponent<AvatarProps> = ({
           hidePlaceholder && styles.hiddenPlaceholderStyle,
         ])}
         PlaceholderContent={PlaceholderContent}
-        containerStyle={imageContainerStyle as StyleProp<TextStyle>}
+        containerStyle={imageContainerStyle as StyleProp<ViewStyle>}
         source={source || {uri: ''}}
         borderRadius={rounded ? width / 2 : undefined}
         {...imageProps}

@@ -47,7 +47,9 @@ export const LinearProgress: StarFunctionComponent<LinearProgressProps> = ({
     new Animated.Value(0),
   );
 
-  const intermediate = React.useRef<Animated.CompositeAnimation>();
+  const intermediate = React.useRef<Animated.CompositeAnimation | undefined>(
+    undefined,
+  );
 
   const startAnimation = React.useCallback(() => {
     if (variant === 'indeterminate') {
@@ -107,7 +109,8 @@ export const LinearProgress: StarFunctionComponent<LinearProgressProps> = ({
           position: 'relative',
         },
         style,
-      ]}>
+      ]}
+    >
       {animation ? (
         <Animated.View
           testID="STAR__LinearProgress_Progress"

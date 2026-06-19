@@ -101,7 +101,8 @@ export const Text: StarFunctionComponent<TextProps> = ({
         overline &&
           StyleSheet.flatten([{fontSize: normalize(10)}, overlineStyle]),
       ])}
-      {...patchWebProps(rest)}>
+      {...patchWebProps(rest)}
+    >
       {children}
     </NativeText>
   );

@@ -1,6 +1,10 @@
 import React from 'react';
 
-const renderNode = (Component: any, content: any, defaultProps: any = {}) => {
+const renderNode = (
+  Component: React.ComponentType<any> | undefined,
+  content: unknown,
+  defaultProps: Record<string, unknown> = {},
+): React.ReactElement | null => {
   if (content == null || content === false) {
     return null;
   }
@@ -10,8 +14,10 @@ const renderNode = (Component: any, content: any, defaultProps: any = {}) => {
   if (typeof content === 'function') {
     return content();
   }
-  // Just in case
   if (content === true) {
+    if (!Component) {
+      return null;
+    }
     return <Component {...defaultProps} />;
   }
   if (typeof content === 'string') {
@@ -23,6 +29,8 @@ const renderNode = (Component: any, content: any, defaultProps: any = {}) => {
   if (typeof content === 'number') {
     return <Component {...defaultProps}>{content}</Component>;
   }
-  return <Component {...defaultProps} {...content} />;
+  return (
+    <Component {...defaultProps} {...(content as Record<string, unknown>)} />
+  );
 };
 export default renderNode;

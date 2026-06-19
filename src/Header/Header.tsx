@@ -69,7 +69,7 @@ export type HeaderProps = ViewProps & {
   /** Styling for container around the rightComponent. */
   rightContainerStyle?: StyleProp<ViewStyle>;
   /** Add children component to the header. */
-  children?: JSX.Element | JSX.Element[];
+  children?: React.ReactElement | React.ReactElement[];
   /** Elevation for header */
   elevated?: boolean;
 };
@@ -103,7 +103,7 @@ export const Header: StarFunctionComponent<HeaderProps> = ({
         "You need to pass a ViewComponent to use linearGradientProps !\nExample: ViewComponent={require('react-native-linear-gradient')}",
       );
     }
-  });
+  }, [linearGradientProps, ViewComponent]);
 
   return (
     <>
@@ -133,16 +133,19 @@ export const Header: StarFunctionComponent<HeaderProps> = ({
         ])}
         source={backgroundImage}
         imageStyle={backgroundImageStyle}
-        {...linearGradientProps}>
+        {...linearGradientProps}
+      >
         <SafeAreaView
           edges={['left', 'top', 'right']}
-          style={styles.headerSafeView}>
+          style={styles.headerSafeView}
+        >
           <Children
             style={StyleSheet.flatten([
               placement === 'center' && styles.rightLeftContainer,
               leftContainerStyle,
             ])}
-            placement="left">
+            placement="left"
+          >
             {(React.isValidElement(children) && children) ||
               children[0] ||
               leftComponent}
@@ -158,7 +161,8 @@ export const Header: StarFunctionComponent<HeaderProps> = ({
               },
               centerContainerStyle,
             ])}
-            placement={placement}>
+            placement={placement}
+          >
             {children[1] || centerComponent}
           </Children>
 
@@ -167,7 +171,8 @@ export const Header: StarFunctionComponent<HeaderProps> = ({
               placement === 'center' && styles.rightLeftContainer,
               rightContainerStyle,
             ])}
-            placement="right">
+            placement="right"
+          >
             {children[2] || rightComponent}
           </Children>
         </SafeAreaView>

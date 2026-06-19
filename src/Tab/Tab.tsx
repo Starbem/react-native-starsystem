@@ -84,8 +84,12 @@ export const TabBase: StarFunctionComponent<TabBaseProps> = ({
             backgroundColor: variant ? colors[variant] : 'transparent',
           },
         ]}
-        onLayout={({nativeEvent: {layout}}) => setDim(Object(layout))}>
+        onLayout={({nativeEvent: {layout}}) => setDim({width: layout.width})}
+      >
         {React.Children.map(children, (child, index) => {
+          if (!React.isValidElement(child)) {
+            return null;
+          }
           return React.cloneElement(child as React.ReactElement<TabItemProps>, {
             childs: React.Children.count(children),
             onPress: () => onChange(index),
@@ -109,7 +113,8 @@ export const TabBase: StarFunctionComponent<TabBaseProps> = ({
                 ],
               },
               indicatorStyle,
-            ]}>
+            ]}
+          >
             <View style={{width: WIDTH}} />
           </Animated.View>
         )}

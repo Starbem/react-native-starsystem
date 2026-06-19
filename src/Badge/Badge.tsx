@@ -64,7 +64,8 @@ export const Badge: StarFunctionComponent<BadgeProps> = ({
   return (
     <View
       testID="STAR__Badge__Container"
-      style={StyleSheet.flatten([containerStyle && containerStyle])}>
+      style={StyleSheet.flatten([containerStyle && containerStyle])}
+    >
       <Component
         {...props}
         testID="STAR__Badge"
@@ -83,7 +84,8 @@ export const Badge: StarFunctionComponent<BadgeProps> = ({
           !element && styles.miniBadge,
           badgeStyle && badgeStyle,
         ])}
-        onPress={onPress}>
+        onPress={onPress}
+      >
         {element}
       </Component>
     </View>

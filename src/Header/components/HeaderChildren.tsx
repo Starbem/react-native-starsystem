@@ -26,20 +26,21 @@ export type HeaderChildrenProps = {
 
 export const Children = ({style, placement, children}: HeaderChildrenProps) => (
   <View
-    style={StyleSheet.flatten([{alignItems: ALIGN_STYLE[placement]}, style])}>
+    style={StyleSheet.flatten([{alignItems: ALIGN_STYLE[placement]}, style])}
+  >
     {children == null || children === false
       ? null
       : children.text
-      ? renderNode(Text, children.text, {numberOfLines: 1, ...children})
-      : children.icon
-      ? renderNode(Icon, {
-          ...children,
-          name: children.icon,
-          containerStyle: StyleSheet.flatten([
-            {alignItems: ALIGN_STYLE[placement]},
-            children.containerStyle,
-          ]),
-        })
-      : renderNode(Text, children)}
+        ? renderNode(Text, children.text, {numberOfLines: 1, ...children})
+        : children.icon
+          ? renderNode(Icon, {
+              ...children,
+              name: children.icon,
+              containerStyle: StyleSheet.flatten([
+                {alignItems: ALIGN_STYLE[placement]},
+                children.containerStyle,
+              ]),
+            })
+          : renderNode(Text, children)}
   </View>
 );

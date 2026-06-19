@@ -90,7 +90,7 @@ export const Icon: StarFunctionComponent<IconProps> = ({
   disabledStyle,
   onPress,
   Component = onPress
-    ? Platform.select<typeof React.Component>({
+    ? Platform.select<React.ComponentType<any>>({
         android: TouchableNativeFeedback,
         default: TouchableHighlight,
       })
@@ -144,7 +144,8 @@ export const Icon: StarFunctionComponent<IconProps> = ({
           : {},
         containerStyle && containerStyle,
       ])}
-      testID="STAR__ICON__CONTAINER">
+      testID="STAR__ICON__CONTAINER"
+    >
       <Component
         {...attributes}
         {...(onPress && {
@@ -153,20 +154,23 @@ export const Icon: StarFunctionComponent<IconProps> = ({
           underlayColor: reverse ? color : underlayColor,
           activeOpacity: 0.3,
           accessibilityRole: 'button',
+          accessibilityState: {disabled},
         })}
-        testID="STAR__ICON__CONTAINER_ACTION">
+        testID="STAR__ICON__CONTAINER_ACTION"
+      >
         <View
           style={StyleSheet.flatten([
             (reverse || raised) && buttonStyles,
             {
-              backgroundColor: getBackgroundColor,
+              backgroundColor: getBackgroundColor as string | undefined,
               alignItems: 'center',
               justifyContent: 'center',
             },
             disabled && styles.disabled,
             disabled && disabledStyle,
           ])}
-          testID="STAR__ICON">
+          testID="STAR__ICON"
+        >
           <IconComponent
             testID="STAR__ICON__Component"
             style={StyleSheet.flatten([

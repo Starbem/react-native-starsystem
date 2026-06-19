@@ -48,15 +48,15 @@ export const Switch: StarFunctionComponent<SwitchProps> = ({
     Platform.OS === 'ios' || !disabled
       ? switchedOnColor
       : theme?.colors?.disabled
-      ? theme.colors.disabled
-      : '';
+        ? theme.colors.disabled
+        : '';
 
   const thumbTintColor =
     Platform.OS === 'ios'
       ? undefined
       : disabled || !value
-      ? theme?.colors?.disabled
-      : switchedOnColor;
+        ? theme?.colors?.disabled
+        : switchedOnColor;
 
   const props =
     Platform.OS === 'web'

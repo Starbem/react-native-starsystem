@@ -4,7 +4,9 @@ import * as Animatable from 'react-native-animatable';
 
 import {AnimatedProps} from '../config/animations';
 
-export const AnimatedText: React.FC<AnimatedProps & TextProps> = ({
+export const AnimatedText: React.FunctionComponent<
+  AnimatedProps & TextProps
+> = ({
   children,
   animation,
   duration,
@@ -17,14 +19,15 @@ export const AnimatedText: React.FC<AnimatedProps & TextProps> = ({
 }) => {
   return (
     <Animatable.Text
-      {...props}
-      style={[styles.container, props.style]}
+      {...(props as any)}
+      style={StyleSheet.flatten([styles.container, props.style]) as any}
       animation={animation}
       duration={duration}
       delay={delay}
       direction={direction}
       easing={easing}
-      useNativeDriver={useNativeDriver}>
+      useNativeDriver={useNativeDriver}
+    >
       {children}
     </Animatable.Text>
   );

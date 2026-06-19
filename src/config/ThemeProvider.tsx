@@ -20,6 +20,7 @@ export const ThemeContext: React.Context<ThemeProps<{}>> = React.createContext({
 
 export type ThemeProviderProps = {
   useDark?: boolean;
+  children?: React.ReactNode;
 };
 
 type ThemeProviderState = {
@@ -107,7 +108,8 @@ export default class ThemeProvider extends React.Component<
           theme: this.state.theme,
           updateTheme: this.updateTheme,
           replaceTheme: this.replaceTheme,
-        }}>
+        }}
+      >
         {this.props.children}
       </ThemeContext.Provider>
     );

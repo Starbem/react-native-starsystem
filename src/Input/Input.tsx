@@ -86,7 +86,7 @@ export const Input: StarFunctionComponent<
   value,
   ...props
 }) => {
-  const input = React.useRef<any>(null);
+  const input = React.useRef<TextInput>(null);
   const shakeAnimationValue = new Animated.Value(0);
 
   const translateX = shakeAnimationValue.interpolate({
@@ -99,7 +99,8 @@ export const Input: StarFunctionComponent<
   return (
     <View
       testID="STAR__Input__view-wrapper"
-      style={StyleSheet.flatten([styles.container, containerStyle])}>
+      style={StyleSheet.flatten([styles.container, containerStyle])}
+    >
       <Animated.View
         style={StyleSheet.flatten([
           {
@@ -112,13 +113,15 @@ export const Input: StarFunctionComponent<
           },
           inputContainerStyle,
           {transform: [{translateX}]},
-        ])}>
+        ])}
+      >
         {leftIcon && (
           <View
             style={StyleSheet.flatten([
               styles.iconContainer,
               leftIconContainerStyle,
-            ])}>
+            ])}
+          >
             {renderNode(Icon, leftIcon)}
           </View>
         )}
@@ -171,7 +174,8 @@ export const Input: StarFunctionComponent<
             style={StyleSheet.flatten([
               styles.iconContainer,
               rightIconContainerStyle,
-            ])}>
+            ])}
+          >
             {renderNode(Icon, rightIcon)}
           </View>
         )}
@@ -192,7 +196,8 @@ export const Input: StarFunctionComponent<
             margin: 0,
             padding: 0,
           },
-        ])}>
+        ])}
+      >
         {errorMessage}
       </Text>
     </View>

@@ -4,7 +4,9 @@ import * as Animatable from 'react-native-animatable';
 
 import {AnimatedProps} from '../config/animations';
 
-export const AnimatedImage: React.FC<AnimatedProps & ImageProps> = ({
+export const AnimatedImage: React.FunctionComponent<
+  AnimatedProps & ImageProps
+> = ({
   animation,
   duration,
   delay,
@@ -15,8 +17,8 @@ export const AnimatedImage: React.FC<AnimatedProps & ImageProps> = ({
 }) => {
   return (
     <Animatable.Image
-      {...props}
-      style={[styles.container, props.style]}
+      {...(props as any)}
+      style={StyleSheet.flatten([styles.container, props.style]) as any}
       animation={animation}
       duration={duration}
       delay={delay}

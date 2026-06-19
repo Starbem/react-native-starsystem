@@ -83,14 +83,16 @@ export const CheckBox: StarFunctionComponent<CheckBoxProps> = ({
         styles.container,
         title && styles.containerHasTitle,
         containerStyle && containerStyle,
-      ])}>
+      ])}
+    >
       <View
         style={StyleSheet.flatten([
           styles.wrapper,
           right && {justifyContent: 'flex-end'},
           center && {justifyContent: 'center'},
           wrapperStyle && wrapperStyle,
-        ])}>
+        ])}
+      >
         {!iconRight && (
           <CheckBoxIcon {...iconProps} checkedColor={checkedColor} />
         )}
@@ -118,9 +120,10 @@ export const CheckBox: StarFunctionComponent<CheckBoxProps> = ({
                     },
                     textStyle && textStyle,
                     fontFamily && {fontFamily},
-                  ]) as any
+                  ]) as StyleProp<TextStyle>
                 }
-                {...titleProps}>
+                {...titleProps}
+              >
                 {checked ? checkedTitle || title : title}
               </TextElement>
             )}

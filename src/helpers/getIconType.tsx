@@ -1,12 +1,16 @@
+import React from 'react';
 import {IconType} from '../Icon';
 
-const customIcons: any = {};
+const customIcons: Record<string, React.ComponentType<any>> = {};
 
-export const registerCustomIconType = (id: string, customIcon: any) => {
+export const registerCustomIconType = (
+  id: string,
+  customIcon: React.ComponentType<any>,
+) => {
   customIcons[id] = customIcon;
 };
 
-export default (type: IconType): any => {
+export default (type: IconType): React.ComponentType<any> => {
   switch (type) {
     case 'zocial':
       return require('react-native-vector-icons/Zocial').default;
