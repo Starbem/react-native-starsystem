@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://starbem.app/">
-    <img alt="Star System" src="https://starbem-site-cms.s3.amazonaws.com/images/Starbem_logo_b001241faf.png" width="260" />
+    <img alt="Star System" src="https://cdn.prod.website-files.com/689b44fc1edbc2bdb69367e8/68a3c899e1f18d602f25dc96_Logo.svg" width="260" />
   </a>
 </p>
 
