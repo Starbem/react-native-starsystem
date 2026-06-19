@@ -52,11 +52,11 @@ export default {
   },
   default: {
     regular: {
-      fontFamily: 'Muli',
+      fontFamily: 'FunnelDisplay',
       fontWeight: 'normal',
     },
     bold: {
-      fontFamily: 'Muli-SemiBold',
+      fontFamily: 'FunnelDisplay-SemiBold',
       fontWeight: 'bold',
     },
   },

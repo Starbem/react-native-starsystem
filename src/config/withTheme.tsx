@@ -12,7 +12,7 @@ export interface ThemedComponent {
 }
 
 const ThemedComponent = (
-  WrappedComponent: any,
+  WrappedComponent: React.ComponentType<any>,
   themeKey?: string,
   displayName?: string,
 ) => {
@@ -63,12 +63,14 @@ const ThemedComponent = (
   );
 };
 
+type ThemeKeys = 'theme' | 'updateTheme' | 'replaceTheme';
+
 function withTheme<P = {}, T = {}>(
   WrappedComponent: React.ComponentType<P & Partial<ThemeProps<T>>>,
   themeKey?: string,
 ):
-  | React.FunctionComponent<Omit<P, keyof ThemeProps<T>>>
-  | React.ForwardRefExoticComponent<P> {
+  | React.FunctionComponent<Omit<P, ThemeKeys>>
+  | React.ForwardRefExoticComponent<Omit<P, ThemeKeys>> {
   const name = themeKey
     ? `Themed.${themeKey}`
     : `Themed.${
@@ -77,9 +79,12 @@ function withTheme<P = {}, T = {}>(
   const Component = ThemedComponent(WrappedComponent, themeKey, name);
 
   if (isClassComponent(WrappedComponent)) {
-    return hoistNonReactStatics(React.forwardRef(Component), WrappedComponent);
+    return hoistNonReactStatics(
+      React.forwardRef(Component),
+      WrappedComponent,
+    ) as unknown as React.ForwardRefExoticComponent<Omit<P, ThemeKeys>>;
   }
-  return Component;
+  return Component as unknown as React.FunctionComponent<Omit<P, ThemeKeys>>;
 }
 
 export default withTheme;

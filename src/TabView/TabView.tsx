@@ -90,7 +90,8 @@ export const TabViewBase: StarFunctionComponent<TabViewBaseProps> = ({
           ],
         },
       ]}
-      {...panResponder.panHandlers}>
+      {...panResponder.panHandlers}
+    >
       {React.Children.map(children, child => (
         <View style={styles.container}>{child}</View>
       ))}

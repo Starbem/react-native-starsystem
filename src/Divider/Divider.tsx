@@ -52,8 +52,8 @@ export const Divider: StarFunctionComponent<DividerProps> = ({
           (insetType === 'left'
             ? styles.leftInset
             : insetType === 'right'
-            ? styles.rightInset
-            : {...styles.leftInset, ...styles.rightInset}),
+              ? styles.rightInset
+              : {...styles.leftInset, ...styles.rightInset}),
         orientation === 'vertical' && styles.vertical,
         width &&
           (orientation === 'horizontal'
@@ -72,7 +72,8 @@ export const Divider: StarFunctionComponent<DividerProps> = ({
           styles.subHeader,
           subHeaderStyle,
           inset && styles.leftInset,
-        ])}>
+        ])}
+      >
         {subHeader}
       </Text>
     ) : null}

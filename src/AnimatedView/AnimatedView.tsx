@@ -4,7 +4,9 @@ import * as Animatable from 'react-native-animatable';
 
 import {AnimatedProps} from '../config/animations';
 
-export const AnimatedView: React.FC<AnimatedProps & ViewProps> = ({
+export const AnimatedView: React.FunctionComponent<
+  AnimatedProps & ViewProps
+> = ({
   children,
   animation,
   duration,
@@ -16,14 +18,15 @@ export const AnimatedView: React.FC<AnimatedProps & ViewProps> = ({
 }) => {
   return (
     <Animatable.View
-      {...props}
-      style={[styles.container, props.style]}
+      {...(props as any)}
+      style={StyleSheet.flatten([styles.container, props.style]) as any}
       animation={animation}
       duration={duration}
       delay={delay}
       direction={direction}
       easing={easing}
-      useNativeDriver={useNativeDriver}>
+      useNativeDriver={useNativeDriver}
+    >
       {children}
     </Animatable.View>
   );

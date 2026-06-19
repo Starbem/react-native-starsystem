@@ -133,7 +133,11 @@ export type ButtonProps = TouchableOpacityProps &
 export const Button: StarFunctionComponent<ButtonProps> = ({
   TouchableComponent,
   containerStyle,
-  onPress = () => console.log('Please attach a method to this component'),
+  onPress = () => {
+    if (__DEV__) {
+      console.log('Please attach a method to this component');
+    }
+  },
   buttonStyle,
   type = 'solid',
   loading = false,
@@ -227,12 +231,13 @@ export const Button: StarFunctionComponent<ButtonProps> = ({
       style={[
         styles.container,
         {
-          borderRadius: 8 || styles.container.borderRadius,
+          borderRadius: 8,
         },
         containerStyle,
         raised && !disabled && type !== 'clear' && styles.raised,
       ]}
-      testID="STAR_BUTTON_WRAPPER">
+      testID="STAR_BUTTON_WRAPPER"
+    >
       <TouchableComponentInternal
         onPress={handleOnPress}
         delayPressIn={0}
@@ -241,7 +246,8 @@ export const Button: StarFunctionComponent<ButtonProps> = ({
         accessibilityState={accessibilityState}
         disabled={disabled}
         background={background}
-        {...attributes}>
+        {...attributes}
+      >
         <ViewComponent
           {...linearGradientProps}
           style={StyleSheet.flatten([
@@ -274,7 +280,8 @@ export const Button: StarFunctionComponent<ButtonProps> = ({
                   .string(),
               },
             disabled && disabledStyle,
-          ])}>
+          ])}
+        >
           {loading && (
             <ActivityIndicator
               style={StyleSheet.flatten([styles.loading, loadingStyle])}

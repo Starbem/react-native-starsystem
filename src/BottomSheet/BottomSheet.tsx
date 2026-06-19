@@ -35,17 +35,20 @@ export const BottomSheet: StarFunctionComponent<BottomSheetProps> = ({
       animationType="slide"
       transparent={true}
       visible={isVisible}
-      {...modalProps}>
+      {...modalProps}
+    >
       <View
         style={StyleSheet.flatten([
           styles.safeAreaView,
           containerStyle && containerStyle,
         ])}
-        {...props}>
+        {...props}
+      >
         <View style={styles.container}>
           <ScrollView
             {...scrollViewProps}
-            contentContainerStyle={styles.content}>
+            contentContainerStyle={styles.content}
+          >
             {children}
           </ScrollView>
         </View>

@@ -21,7 +21,8 @@ export const ListItemSubtitle: StarFunctionComponent<ListItemSubtitleProps> = ({
         right && styles.rightSubtitle,
         style,
       ])}
-      {...props}>
+      {...props}
+    >
       {children}
     </Text>
   );

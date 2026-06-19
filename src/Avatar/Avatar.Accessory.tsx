@@ -44,7 +44,8 @@ export const Accessory: StarFunctionComponent<AccessoryProps> = ({
       ]}
       underlayColor={underlayColor}
       onPress={onPress}
-      onLongPress={onLongPress}>
+      onLongPress={onLongPress}
+    >
       <View>
         {source ? (
           <Image

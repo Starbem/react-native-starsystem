@@ -24,7 +24,8 @@ export const ListItemTitle: StarFunctionComponent<TitleProps> = ({
         right && styles.rightTitle,
         style,
       ])}
-      {...props}>
+      {...props}
+    >
       {children}
     </Text>
   );

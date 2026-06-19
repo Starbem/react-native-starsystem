@@ -80,7 +80,8 @@ export const Image: StarFunctionComponent<ImageProps> = ({
       onPress={onPress}
       onLongPress={onLongPress}
       accessibilityIgnoresInvertColors={true}
-      style={StyleSheet.flatten([styles.container, containerStyle])}>
+      style={StyleSheet.flatten([styles.container, containerStyle])}
+    >
       <ImageComponent
         ref={root}
         testID="STAR__Image"
@@ -95,19 +96,21 @@ export const Image: StarFunctionComponent<ImageProps> = ({
         accessibilityElementsHidden={hasImage}
         importantForAccessibility={hasImage ? 'no-hide-descendants' : 'yes'}
         style={[
-          StyleSheet.absoluteFillObject,
+          {position: 'absolute', left: 0, right: 0, top: 0, bottom: 0},
           // eslint-disable-next-line react-native/no-inline-styles
           {
             opacity: hasImage ? placeholderOpacity.current : 1,
           },
-        ]}>
+        ]}
+      >
         <View
           testID="STAR__Image__placeholder"
           style={StyleSheet.flatten([
             style,
             styles.placeholder,
             placeholderStyle,
-          ])}>
+          ])}
+        >
           {React.isValidElement(PlaceholderContent)
             ? PlaceholderContent
             : PlaceholderContent && (
@@ -120,7 +123,8 @@ export const Image: StarFunctionComponent<ImageProps> = ({
       {/* Children for Image */}
       <View
         testID="STAR__Image__children__container"
-        style={childrenContainerStyle ?? style}>
+        style={childrenContainerStyle ?? style}
+      >
         {children}
       </View>
     </Component>

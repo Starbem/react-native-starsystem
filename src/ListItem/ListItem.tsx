@@ -29,7 +29,7 @@ export type ListItemBaseProps = TouchableHighlightProps & {
   /** Props for linear gradient component. */
   linearGradientProps?: any;
   /** Add enclosed childrens. */
-  children?: any;
+  children?: React.ReactNode;
 };
 
 export const ListItemBase: StarFunctionComponent<ListItemBaseProps> = props => {
@@ -61,7 +61,8 @@ export const ListItemBase: StarFunctionComponent<ListItemBaseProps> = props => {
       {...attributes}
       onPress={onPress}
       onLongPress={onLongPress}
-      disabled={disabled}>
+      disabled={disabled}
+    >
       <PadView
         Component={ViewComponent}
         {...linearGradientProps}
@@ -85,7 +86,8 @@ export const ListItemBase: StarFunctionComponent<ListItemBaseProps> = props => {
           containerStyle,
           disabled && disabledStyle,
         ])}
-        pad={pad}>
+        pad={pad}
+      >
         {children}
       </PadView>
     </Component>

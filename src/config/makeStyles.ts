@@ -11,9 +11,10 @@ export const makeStyles =
   <T extends StyleSheet.NamedStyles<T> | StyleSheet.NamedStyles<any>, V>(
     styles: T | ((theme: Partial<FullTheme>, props: V) => T),
   ) =>
-  (props: V = {} as any): T => {
+  (props?: V): T => {
     const {theme} = useTheme();
-    const css = typeof styles === 'function' ? styles(theme, props) : styles;
+    const css =
+      typeof styles === 'function' ? styles(theme, props as V) : styles;
 
     return StyleSheet.create(css);
   };
