@@ -35,7 +35,9 @@ export type DropdownProps<T = any> = {
   placeholder?: string;
   /** Label displayed above the input. */
   label?: string;
-  /** Error message shown below the input. */
+  /** Helper text shown below the input when there's no error. */
+  hint?: string;
+  /** Error message shown below the input. Takes priority over `hint`. */
   errorMessage?: string;
   /** Disable interaction. */
   disabled?: boolean;
@@ -67,6 +69,7 @@ export const Dropdown: StarFunctionComponent<DropdownProps> = ({
   onChange,
   placeholder = 'Select an option',
   label,
+  hint,
   errorMessage,
   disabled = false,
   containerStyle,
@@ -168,10 +171,12 @@ export const Dropdown: StarFunctionComponent<DropdownProps> = ({
         />
       </TouchableOpacity>
 
-      {!!errorMessage && (
+      {errorMessage ? (
         <Text style={[styles.errorText, {color: errorColor}, errorStyle]}>
           {errorMessage}
         </Text>
+      ) : (
+        !!hint && <Text style={styles.hintText}>{hint}</Text>
       )}
 
       <Modal
@@ -302,6 +307,11 @@ const styles = StyleSheet.create({
   errorText: {
     fontSize: 12,
     marginTop: 4,
+  },
+  hintText: {
+    fontSize: 12,
+    marginTop: 4,
+    color: semanticColors.textSecondary,
   },
   overlay: {
     flex: 1,

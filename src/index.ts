@@ -1,6 +1,7 @@
 import AnimatedView, {AnimatedProps} from './AnimatedView';
 import AnimatedImage from './AnimatedImage';
 import AnimatedText from './AnimatedText';
+import Alert, {AlertProps} from './Alert';
 import Avatar, {AvatarProps} from './Avatar';
 import Badge, {BadgeProps, withBadge} from './Badge';
 import BottomSheet, {BottomSheetProps} from './BottomSheet';
@@ -14,6 +15,7 @@ import Divider, {DividerProps} from './Divider';
 import Dropdown, {DropdownProps, DropdownItem} from './Dropdown';
 import Header, {HeaderProps} from './Header';
 import Icon, {IconProps} from './Icon';
+import IconButton, {IconButtonProps} from './IconButton';
 import Image, {ImageProps} from './Image';
 import Input, {InputProps} from './Input';
 import LinearProgress, {LinearProgressProps} from './LinearProgress';
@@ -22,8 +24,12 @@ import ListItem, {
   ListItemAccordionProps,
   ListItemSwipeableProps,
 } from './ListItem';
+import Modal, {ModalProps} from './Modal';
 import ModalDatePicker, {ModalDatePickerProps, DateRange} from './ModalDatePicker';
+import Radio, {RadioProps} from './Radio';
+import Skeleton, {SkeletonProps} from './Skeleton';
 import SocialButton, {SocialButtonProps, SocialProvider} from './SocialButton';
+import Spinner, {SpinnerProps, Dots, DotsProps} from './Spinner';
 import Switch, {SwitchProps} from './Switch';
 import Tab, {TabItemProps, TabProps} from './Tab';
 import TabView, {TabViewProps} from './TabView';
@@ -59,6 +65,7 @@ export {
   AnimatedView,
   AnimatedImage,
   AnimatedText,
+  Alert,
   Avatar,
   Badge,
   BottomSheet,
@@ -70,14 +77,20 @@ export {
   ContentBox,
   Divider,
   Dropdown,
+  Dots,
   Header,
   Icon,
+  IconButton,
   Image,
   Input,
   LinearProgress,
   ListItem,
+  Modal,
   ModalDatePicker,
+  Radio,
+  Skeleton,
   SocialButton,
+  Spinner,
   Switch,
   Tab,
   TabView,
@@ -106,6 +119,7 @@ export {getBottomSpace, getStatusBarHeight, isIphoneX, ifIphoneX};
 // Components Props exports
 export type {
   AnimatedProps,
+  AlertProps,
   AvatarProps,
   BadgeProps,
   BottomSheetProps,
@@ -118,9 +132,11 @@ export type {
   Colors,
   DateRange,
   DividerProps,
+  DotsProps,
   DropdownItem,
   DropdownProps,
   HeaderProps,
+  IconButtonProps,
   IconProps,
   ImageProps,
   InputProps,
@@ -128,9 +144,13 @@ export type {
   ListItemAccordionProps,
   ListItemProps,
   ListItemSwipeableProps,
+  ModalProps,
   ModalDatePickerProps,
+  RadioProps,
+  SkeletonProps,
   SocialButtonProps,
   SocialProvider,
+  SpinnerProps,
   SwitchProps,
   TabItemProps,
   TabProps,

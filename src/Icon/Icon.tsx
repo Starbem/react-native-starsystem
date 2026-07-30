@@ -19,6 +19,11 @@ import getIconType from '../helpers/getIconType';
 import getIconStyle from '../helpers/getIconStyle';
 import {StarFunctionComponent} from '../helpers';
 
+// DS web usa Material Symbols Rounded (fonte variável, peso 200 fixo via
+// font-variation-settings, ver assets/icons.css do bundle DS). RN não aplica
+// eixos de variable font em runtime — manter MaterialIcons/MaterialCommunityIcons
+// (glyph set diferente, sem paridade de peso) até decisão futura de portar
+// Material Symbols como icon set customizado (fonte estática instanciada + glyph map).
 export type IconType =
   | 'material'
   | 'material-community'
