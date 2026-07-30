@@ -102,7 +102,7 @@ export const TabBase: StarFunctionComponent<TabBaseProps> = ({
             style={[
               styles.indicator,
               {
-                backgroundColor: theme?.colors?.secondary,
+                backgroundColor: theme?.colors?.primary,
                 transform: [
                   {
                     translateX: animation.interpolate({

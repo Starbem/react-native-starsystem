@@ -21,6 +21,13 @@ export const avatarSizes = {
   medium: 50,
   large: 75,
   xlarge: 150,
+  // DS scale aliases (Starbem Design System) — additive, don't remove the ones above.
+  xs: 24,
+  sm: 32,
+  md: 40,
+  lg: 48,
+  xl: 64,
+  '2xl': 88,
 };
 
 type AvatarIcon = IconObject & {
@@ -54,8 +61,11 @@ export type AvatarProps = {
   icon?: AvatarIcon;
   /** Extra styling for icon component. */
   iconStyle?: StyleProp<TextStyle>;
-  /** Size of the avatar. */
-  size?: ('small' | 'medium' | 'large' | 'xlarge') | number;
+  /** Size of the avatar. `xs`/`sm`/`md`/`lg`/`xl`/`2xl` match the DS scale (24-88px). */
+  size?:
+    | ('small' | 'medium' | 'large' | 'xlarge')
+    | ('xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl')
+    | number;
   /** Adds style to the placeholder wrapper. */
   placeholderStyle?: StyleProp<ViewStyle>;
   /** Custom placeholder element (by default, it's the title). */

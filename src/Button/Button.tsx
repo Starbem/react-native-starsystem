@@ -16,7 +16,8 @@ import {
 } from 'react-native';
 import Color from 'color';
 import {renderNode, color, StarFunctionComponent} from '../helpers';
-import {colors} from '../config';
+import {colors, tokens} from '../config';
+const {radius} = tokens;
 import Icon, {IconNode} from '../Icon';
 import {Theme} from '../config/theme';
 import {TextProps} from '../Text';
@@ -231,7 +232,7 @@ export const Button: StarFunctionComponent<ButtonProps> = ({
       style={[
         styles.container,
         {
-          borderRadius: 8,
+          borderRadius: radius.lg,
         },
         containerStyle,
         raised && !disabled && type !== 'clear' && styles.raised,
@@ -317,19 +318,19 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 8,
+    borderRadius: radius.lg,
     padding: 8,
     height: 48,
   },
   buttonOrientation: {
     justifyContent: 'center',
     alignItems: 'center',
-    borderRadius: 8,
+    borderRadius: radius.lg,
     padding: 8,
   },
   container: {
     overflow: 'hidden',
-    borderRadius: 8,
+    borderRadius: radius.lg,
   },
   title: {
     fontSize: 16,

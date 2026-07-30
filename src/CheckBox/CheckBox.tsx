@@ -39,6 +39,8 @@ export type CheckBoxProps = TouchableOpacityProps &
     checkedTitle?: string;
     /** Specify different font family. */
     fontFamily?: string;
+    /** Semantic color for the checked state — matches DS tones. Ignored if `checkedColor` is set. */
+    tone?: 'primary' | 'success' | 'accent';
   };
 
 export const CheckBox: StarFunctionComponent<CheckBoxProps> = ({
@@ -57,7 +59,12 @@ export const CheckBox: StarFunctionComponent<CheckBoxProps> = ({
   theme,
   onPress,
   onLongPress,
-  checkedColor = theme?.colors?.primary,
+  tone = 'primary',
+  checkedColor = tone === 'accent'
+    ? theme?.colors?.secondary
+    : tone === 'success'
+      ? theme?.colors?.success
+      : theme?.colors?.primary,
   ...rest
 }) => {
   const accessibilityState = {

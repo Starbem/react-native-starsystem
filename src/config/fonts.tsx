@@ -13,6 +13,17 @@ export interface Fonts {
   };
 }
 
+// fontFamily usa o PostScript name de cada peso (assets/fonts) — RN não resolve
+// fontWeight de forma confiável sobre uma família única no iOS, então cada peso
+// vira uma "família" própria. Mapeamento pros weight tokens do DS (300-700).
+export const fontWeights = {
+  light: 'FunnelDisplay-Light', // 300
+  regular: 'FunnelDisplay-Regular', // 400
+  medium: 'FunnelDisplay-Medium', // 500
+  semibold: 'FunnelDisplay-SemiBold', // 600
+  bold: 'FunnelDisplay-Bold', // 700
+};
+
 export default {
   android: {
     regular: {
@@ -52,11 +63,13 @@ export default {
   },
   default: {
     regular: {
-      fontFamily: 'FunnelDisplay',
+      fontFamily: fontWeights.regular,
       fontWeight: 'normal',
     },
     bold: {
-      fontFamily: 'FunnelDisplay-SemiBold',
+      // mantém SemiBold (peso já usado em produção); Bold 700 real disponível
+      // em fontWeights.bold se quiserem peso mais forte — não troquei sozinho.
+      fontFamily: fontWeights.semibold,
       fontWeight: 'bold',
     },
   },

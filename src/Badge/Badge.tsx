@@ -9,7 +9,7 @@ import {
   ViewStyle,
   TextStyle,
 } from 'react-native';
-import {renderNode, StarFunctionComponent} from '../helpers';
+import {color as toColor, renderNode, StarFunctionComponent} from '../helpers';
 
 export type BadgeProps = {
   /** Style for the container. */
@@ -43,6 +43,8 @@ export type BadgeProps = {
     | 'success'
     | 'warning'
     | 'error';
+  /** `solid` (default, existing look) or `subtle` — tinted background, matches DS's subtle badge. */
+  variant?: 'solid' | 'subtle';
 };
 
 export const Badge: StarFunctionComponent<BadgeProps> = ({
@@ -55,10 +57,20 @@ export const Badge: StarFunctionComponent<BadgeProps> = ({
   value,
   theme,
   status = 'primary',
+  variant = 'solid',
   ...props
 }) => {
+  const base = theme?.colors?.[status] ?? '#000';
+  const isSubtle = variant === 'subtle';
+  const backgroundColor = isSubtle ? toColor(base).lightness(92).string() : base;
+  const textColor = isSubtle ? toColor(base).darken(0.3).string() : 'white';
+
   const element = renderNode(Text, value, {
-    style: StyleSheet.flatten([styles.text, textStyle && textStyle]),
+    style: StyleSheet.flatten([
+      styles.text,
+      isSubtle && {color: textColor},
+      textStyle && textStyle,
+    ]),
     ...textProps,
   });
   return (
@@ -77,8 +89,8 @@ export const Badge: StarFunctionComponent<BadgeProps> = ({
             borderRadius: size / 2,
             alignItems: 'center',
             justifyContent: 'center',
-            backgroundColor: theme?.colors?.[status],
-            borderWidth: StyleSheet.hairlineWidth,
+            backgroundColor,
+            borderWidth: isSubtle ? 0 : StyleSheet.hairlineWidth,
             borderColor: '#fff',
           },
           !element && styles.miniBadge,

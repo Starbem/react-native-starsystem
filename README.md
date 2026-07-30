@@ -110,40 +110,30 @@ export default function App() {
 
 ### Font — Funnel Display
 
-Star System uses **Funnel Display** as the brand typeface. Add the font files to your project:
+Star System uses **Funnel Display** (Google Fonts) as the brand typeface, in weights
+Light/Regular/Medium/SemiBold/Bold (300–700). The `.ttf` files ship inside this package
+at `assets/fonts/` with a `react-native.config.js` declaring them — you don't need to
+download or copy anything yourself.
 
-**Android** — copy the `.ttf` files to `android/app/src/main/assets/fonts/`:
+Just run the link step **in your app**, not in this library, so the community CLI
+autolinks font assets from every installed dependency (including this one):
 
-```
-FunnelDisplay-Regular.ttf
-FunnelDisplay-Medium.ttf
-FunnelDisplay-SemiBold.ttf
-FunnelDisplay-Bold.ttf
-```
-
-**iOS** — add the files to your Xcode project and register them in `Info.plist`:
-
-```xml
-<key>UIAppFonts</key>
-<array>
-  <string>FunnelDisplay-Regular.ttf</string>
-  <string>FunnelDisplay-Medium.ttf</string>
-  <string>FunnelDisplay-SemiBold.ttf</string>
-  <string>FunnelDisplay-Bold.ttf</string>
-</array>
+```bash
+npx react-native-asset
 ```
 
-**Auto-link via `react-native.config.js`:**
+This copies the files into `android/app/src/main/assets/fonts/` and registers them in
+`Info.plist` (`UIAppFonts`) for you. Rebuild the native app afterwards (`pod install` on
+iOS if needed) for the fonts to show up.
 
-```js
-module.exports = {
-  assets: ['./assets/fonts/'],
-};
-```
+Component styles reference the fonts via `fontFamily`, using each weight's PostScript
+name (e.g. `FunnelDisplay-Medium`) rather than a single family + `fontWeight`, since iOS
+doesn't reliably resolve style linking across weights of one family. See
+`src/config/fonts.tsx` (`fontWeights`) for the full mapping.
 
-Then run `npx react-native-asset` to copy the files automatically.
-
-> If the font is not linked, React Native falls back to the system default font silently.
+> If the font isn't linked, React Native falls back to the system default font silently
+> — no error, no crash. If text still looks off after linking, check that the native
+> project actually rebuilt (font registration doesn't hot-reload).
 
 ---
 

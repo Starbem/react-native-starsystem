@@ -16,6 +16,8 @@ import {
 } from 'react-native';
 import {StarFunctionComponent} from '../helpers';
 import Icon from '../Icon';
+import {colors} from '../config';
+import {radius, primaryScale, neutralScale, semanticColors} from '../config/tokens';
 
 export type DropdownItem<T = any> = {
   label: string;
@@ -88,8 +90,8 @@ export const Dropdown: StarFunctionComponent<DropdownProps> = ({
   const [modalVisible, setModalVisible] = useState(false);
   const [search, setSearch] = useState('');
 
-  const primaryColor = theme?.colors?.primary ?? '#FF6B19';
-  const errorColor = theme?.colors?.error ?? '#FF3F72';
+  const primaryColor = theme?.colors?.primary ?? primaryScale.base;
+  const errorColor = theme?.colors?.error ?? colors.error;
 
   const selectedItem = useMemo(
     () => data.find(item => item.value === value) ?? null,
@@ -140,8 +142,8 @@ export const Dropdown: StarFunctionComponent<DropdownProps> = ({
             borderColor: errorMessage
               ? errorColor
               : disabled
-              ? '#CCCCCC'
-              : '#DDDDDD',
+              ? neutralScale[300]
+              : semanticColors.borderDefault,
           },
           disabled && styles.inputDisabled,
           inputContainerStyle,
@@ -153,7 +155,7 @@ export const Dropdown: StarFunctionComponent<DropdownProps> = ({
             styles.inputText,
             !selectedItem && [styles.placeholder, placeholderStyle],
             selectedItem && selectedTextStyle,
-            disabled && {color: '#AAAAAA'},
+            disabled && {color: semanticColors.textTertiary},
           ]}
         >
           {selectedItem?.label ?? placeholder}
@@ -162,7 +164,7 @@ export const Dropdown: StarFunctionComponent<DropdownProps> = ({
           name={modalVisible ? 'chevron-up' : 'chevron-down'}
           type="feather"
           size={18}
-          color={disabled ? '#AAAAAA' : '#666666'}
+          color={disabled ? semanticColors.textTertiary : semanticColors.textSecondary}
         />
       </TouchableOpacity>
 
@@ -196,19 +198,19 @@ export const Dropdown: StarFunctionComponent<DropdownProps> = ({
                 onPress={close}
                 hitSlop={{top: 8, bottom: 8, left: 8, right: 8}}
               >
-                <Icon name="x" type="feather" size={22} color="#333333" />
+                <Icon name="x" type="feather" size={22} color={semanticColors.textPrimary} />
               </TouchableOpacity>
             </View>
 
             {searchable && (
               <View style={styles.searchRow}>
-                <Icon name="search" type="feather" size={16} color="#999999" />
+                <Icon name="search" type="feather" size={16} color={semanticColors.textTertiary} />
                 <TextInput
                   style={styles.searchInput}
                   value={search}
                   onChangeText={setSearch}
                   placeholder={searchPlaceholder}
-                  placeholderTextColor="#AAAAAA"
+                  placeholderTextColor={semanticColors.textTertiary}
                   autoCorrect={false}
                 />
               </View>
@@ -228,7 +230,7 @@ export const Dropdown: StarFunctionComponent<DropdownProps> = ({
                     activeOpacity={0.6}
                     style={[
                       styles.listItem,
-                      isSelected && {backgroundColor: primaryColor + '18'},
+                      isSelected && {backgroundColor: primaryScale.lightest},
                       listItemStyle,
                       isSelected && selectedItemStyle,
                     ]}
@@ -271,7 +273,7 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 14,
-    color: '#333333',
+    color: semanticColors.textPrimary,
     marginBottom: 6,
     fontWeight: '500',
   },
@@ -280,22 +282,22 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: 48,
     paddingHorizontal: 12,
-    borderRadius: 8,
+    borderRadius: radius.md,
     borderWidth: 1,
     backgroundColor: '#FFFFFF',
     justifyContent: 'space-between',
   },
   inputDisabled: {
-    backgroundColor: '#F5F5F5',
+    backgroundColor: semanticColors.surfaceSunken,
   },
   inputText: {
     fontSize: 16,
-    color: '#333333',
+    color: semanticColors.textPrimary,
     flex: 1,
     marginRight: 8,
   },
   placeholder: {
-    color: '#AAAAAA',
+    color: semanticColors.textTertiary,
   },
   errorText: {
     fontSize: 12,
@@ -311,8 +313,8 @@ const styles = StyleSheet.create({
   },
   sheet: {
     backgroundColor: '#FFFFFF',
-    borderTopLeftRadius: 16,
-    borderTopRightRadius: 16,
+    borderTopLeftRadius: radius.lg,
+    borderTopRightRadius: radius.lg,
     paddingBottom: 8,
   },
   sheetHeader: {
@@ -321,12 +323,12 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     padding: 16,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: '#EEEEEE',
+    borderBottomColor: semanticColors.borderSubtle,
   },
   sheetTitle: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#333333',
+    color: semanticColors.textPrimary,
   },
   searchRow: {
     flexDirection: 'row',
@@ -334,14 +336,14 @@ const styles = StyleSheet.create({
     margin: 12,
     paddingHorizontal: 12,
     height: 40,
-    borderRadius: 8,
-    backgroundColor: '#F5F5F5',
+    borderRadius: radius.md,
+    backgroundColor: semanticColors.surfaceSunken,
     gap: 8,
   },
   searchInput: {
     flex: 1,
     fontSize: 14,
-    color: '#333333',
+    color: semanticColors.textPrimary,
   },
   listItem: {
     flexDirection: 'row',
@@ -350,16 +352,16 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     paddingHorizontal: 16,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: '#F0F0F0',
+    borderBottomColor: semanticColors.borderSubtle,
   },
   listItemText: {
     fontSize: 15,
-    color: '#333333',
+    color: semanticColors.textPrimary,
     flex: 1,
   },
   empty: {
     textAlign: 'center',
-    color: '#AAAAAA',
+    color: semanticColors.textTertiary,
     padding: 24,
     fontSize: 14,
   },

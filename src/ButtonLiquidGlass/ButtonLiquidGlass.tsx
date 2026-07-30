@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 import {StarFunctionComponent, renderNode} from '../helpers';
 import Icon, {IconNode} from '../Icon';
+import {primaryScale} from '../config/tokens';
 
 const SIZES = {
   small: {height: 36, paddingHorizontal: 16, fontSize: 14, iconSize: 16, borderRadius: 18},
@@ -57,7 +58,7 @@ export const ButtonLiquidGlass: StarFunctionComponent<ButtonLiquidGlassProps> = 
   ...rest
 }) => {
   const sizeConfig = SIZES[size];
-  const resolvedTint = tintColor ?? theme?.colors?.primary ?? '#FF6B19';
+  const resolvedTint = tintColor ?? theme?.colors?.primary ?? primaryScale.base;
 
   return (
     <View

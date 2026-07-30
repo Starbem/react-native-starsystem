@@ -39,10 +39,10 @@ export interface Colors {
 }
 
 const colors: Colors = {
-  primary: '#FF6B19',
-  primaryLight: '#FF9B00',
-  secondary: '#FF3F72',
-  secondaryLight: '#FFE4EB',
+  primary: '#FF5100',
+  primaryLight: '#FF9353',
+  secondary: '#7F56D9',
+  secondaryLight: '#F3E9FC',
   white: '#ffffff',
   black: '#2C2B43',
   grey0: '#525166',
@@ -55,7 +55,7 @@ const colors: Colors = {
   searchBg: '#303337',
   success: '#1FBA5D',
   error: '#FF4242',
-  warning: '#F89F4D',
+  warning: '#F8A04D',
   disabled: 'hsl(208, 8%, 90%)',
   // Darker color if hairlineWidth is not thin enough
   divider: StyleSheet.hairlineWidth < 1 ? '#bcbbc1' : 'rgba(0, 0, 0, 0.12)',

@@ -15,6 +15,7 @@ import {renderNode, patchWebProps} from '../helpers';
 import {fonts} from '../config';
 import Icon, {IconNode} from '../Icon';
 import {ThemeProps, colors} from '../config';
+import {radius, semanticColors} from '../config/tokens';
 
 const renderText = (content: any, defaultProps: any, style: StyleProp<any>) =>
   renderNode(Text, content, {
@@ -107,8 +108,10 @@ export const Input: StarFunctionComponent<
             flexDirection: 'row',
             alignItems: 'center',
             borderWidth: 1,
-            borderColor: colors.grey3,
-            borderRadius: 8,
+            borderColor: errorMessage
+              ? theme?.colors?.error
+              : semanticColors.borderDefault,
+            borderRadius: radius.md,
             paddingHorizontal: 16,
           },
           inputContainerStyle,

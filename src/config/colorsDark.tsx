@@ -1,11 +1,13 @@
 import {StyleSheet} from 'react-native';
 import {Colors} from './colors';
 
+// DS não define paleta dark separada — brand colors mantidas iguais ao light,
+// só neutrals/surfaces invertem.
 const colorsDark: Colors = {
-  primary: '#FF6B19',
-  primaryLight: '#FF9B00',
-  secondary: '#FF3F72',
-  secondaryLight: '#FFE4EB',
+  primary: '#FF5100',
+  primaryLight: '#FF9353',
+  secondary: '#7F56D9',
+  secondaryLight: '#F3E9FC',
   white: '#080808',
   black: '#f2f2f2',
   grey5: '#393e42',

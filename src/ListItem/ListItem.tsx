@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Platform,
   StyleProp,
   StyleSheet,
   TouchableHighlight,
@@ -10,6 +9,7 @@ import {
 } from 'react-native';
 import {PadView} from './components/PadView';
 import {StarFunctionComponent} from '../helpers';
+import {spacing} from '../config/tokens';
 
 export type ListItemBaseProps = TouchableHighlightProps & {
   /** Additional main container styling. */
@@ -68,14 +68,8 @@ export const ListItemBase: StarFunctionComponent<ListItemBaseProps> = props => {
         {...linearGradientProps}
         style={StyleSheet.flatten([
           {
-            ...Platform.select({
-              ios: {
-                padding: 14,
-              },
-              default: {
-                padding: 16,
-              },
-            }),
+            paddingVertical: spacing[3],
+            paddingHorizontal: spacing[4],
             flexDirection: 'row',
             alignItems: 'center',
             backgroundColor: theme?.colors?.white,

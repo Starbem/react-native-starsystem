@@ -1,18 +1,22 @@
 import React from 'react';
-import {View, Platform, StyleSheet, StyleProp, ViewStyle} from 'react-native';
+import {View, StyleSheet, StyleProp, ViewStyle} from 'react-native';
 import {StarFunctionComponent} from '../helpers';
+import {radius, spacing, shadows, semanticColors} from '../config/tokens';
 
 export type CardBaseProps = {
   /** Outer container style. */
   containerStyle?: StyleProp<ViewStyle>;
   /** Inner container style. */
   wrapperStyle?: StyleProp<ViewStyle>;
+  /** `border` (default, 1px hairline) or `shadow` (elevated, no border) — matches DS Card. */
+  elevation?: 'border' | 'shadow';
 };
 
 export const CardBase: StarFunctionComponent<CardBaseProps> = ({
   children,
   containerStyle,
   wrapperStyle,
+  elevation = 'border',
   theme,
   ...attributes
 }) => {
@@ -22,23 +26,14 @@ export const CardBase: StarFunctionComponent<CardBaseProps> = ({
       style={StyleSheet.flatten([
         {
           backgroundColor: theme?.colors?.white,
-          borderWidth: 1,
-          padding: 15,
-          margin: 15,
+          borderRadius: radius.lg,
+          padding: spacing[6],
+          margin: spacing[4],
           marginBottom: 0,
-          borderColor: theme?.colors?.grey5,
-          ...Platform.select({
-            android: {
-              elevation: 1,
-            },
-            default: {
-              shadowColor: 'rgba(0,0,0, .2)',
-              shadowOffset: {height: 0, width: 0},
-              shadowOpacity: 1,
-              shadowRadius: 1,
-            },
-          }),
         },
+        elevation === 'border'
+          ? {borderWidth: 1, borderColor: semanticColors.borderSubtle}
+          : shadows.lg,
         containerStyle && containerStyle,
       ])}
     >
