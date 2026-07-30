@@ -24,6 +24,18 @@ import ListItem, {
   ListItemAccordionProps,
   ListItemSwipeableProps,
 } from './ListItem';
+import Message, {
+  MessageProps,
+  Reaction,
+  TypingMessage,
+  TypingMessageProps,
+  MessageDay,
+  MessageDayProps,
+  SystemMessage,
+  SystemMessageProps,
+  MessageList,
+  MessageListProps,
+} from './Message';
 import Modal, {ModalProps} from './Modal';
 import ModalDatePicker, {ModalDatePickerProps, DateRange} from './ModalDatePicker';
 import Radio, {RadioProps} from './Radio';
@@ -85,6 +97,9 @@ export {
   Input,
   LinearProgress,
   ListItem,
+  Message,
+  MessageDay,
+  MessageList,
   Modal,
   ModalDatePicker,
   Radio,
@@ -92,9 +107,11 @@ export {
   SocialButton,
   Spinner,
   Switch,
+  SystemMessage,
   Tab,
   TabView,
   Text,
+  TypingMessage,
 };
 
 // Theme utils exports
@@ -144,18 +161,24 @@ export type {
   ListItemAccordionProps,
   ListItemProps,
   ListItemSwipeableProps,
+  MessageProps,
+  MessageDayProps,
+  MessageListProps,
   ModalProps,
   ModalDatePickerProps,
+  Reaction,
   RadioProps,
   SkeletonProps,
   SocialButtonProps,
   SocialProvider,
   SpinnerProps,
   SwitchProps,
+  SystemMessageProps,
   TabItemProps,
   TabProps,
   TabViewProps,
   TextProps,
+  TypingMessageProps,
 };
 
 // Theme props export
