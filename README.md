@@ -7,7 +7,7 @@
 <h1 align="center">@starbemtech/react-native-starsystem</h1>
 
 <p align="center">
-  Cross-platform <a href="https://reactnative.dev">React Native</a> UI toolkit — Starbem's design system for mobile apps.
+  Cross-platform <a href="https://reactnative.dev">React Native</a> UI toolkit — Starbem's design system for mobile apps
 </p>
 
 <p align="center">
